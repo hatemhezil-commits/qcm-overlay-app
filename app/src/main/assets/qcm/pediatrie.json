@@ -1,0 +1,2208 @@
+{
+  "module": "Pédiatrie",
+  "lessons": {
+    "Anémies du nouveau-né": [
+      {
+        "question": "La maladie hémorragique du nouveau-né est liée à :",
+        "options": [
+          "A. Défaut du facteur VIII de coagulation.",
+          "B. Excès d'activité des protéines S et C.",
+          "C. Thrombopénie.",
+          "D. Hypovitaminose K et immaturité hépatique."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "La cyanose apparait dès que le taux de l'oxyhémoglobine dans le sang est diminué de :",
+        "options": ["A. 1%.", "B. 10%.", "C. 95%.", "D. 5%."],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Le taux de l'hémoglobine à la naissance est de :",
+        "options": ["A. 100%.", "B. 80%.", "C. 20%.", "D. 40%."],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Dans l'incompatibilité materno-fœtale ABO le groupe sanguin de la mère est :",
+        "options": ["A. O.", "B. B.", "C. A.", "D. ABO."],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Les réserves en fer chez le nouveau-né normal suffisent pour une durée de :",
+        "options": ["A. 1 mois.", "B. 2 mois.", "C. 4 mois.", "D. 6 mois."],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "L'anémie chez le nouveau-né est définie par un taux d'hémoglobine inférieur à :",
+        "options": ["A. 12g/dl.", "B. 18g/dl.", "C. 10g/dl.", "D. 16g/dl."],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Dans l'incompatibilité materno-fœtale ABO le groupe sanguin de la mère est :",
+        "options": ["A. AB+.", "B. O+.", "C. ABO+.", "D. ABO-."],
+        "correct_option_ids": [1],
+        "explanation": ""
+      }
+    ],
+    "Infections du nouveau-né": [
+      {
+        "question": "Le traitement d'une infection urinaire néonatale est de :",
+        "options": ["A. 30 jours.", "B. 14 jours.", "C. 10 jours.", "D. 21 jours."],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "L'examen macroscopique du placenta permet dès la naissance le diagnostic de l'une des 4 infections néonatales suivantes, laquelle ?",
+        "options": [
+          "A. Infection à pneumocoque.",
+          "B. Infection à streptocoque B.",
+          "C. Infection à listeria monocytogène.",
+          "D. Infection à E.Coli."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "L'infection materno-fœtale pendant le 1er trimestre de la grossesse entraine :",
+        "options": [
+          "A. Un avortement.",
+          "B. Une fœtopathie.",
+          "C. Une embryopathie.",
+          "D. Un accouchement prématuré."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "La durée du traitement d'une méningite néo-natale est de :",
+        "options": ["A. 30 jours.", "B. 14 jours.", "C. 10 jours.", "D. 21 jours."],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Un seul médicament est bactériostatique, lequel ?",
+        "options": ["A. INH.", "B. Rifampicine.", "C. Pyrazinamide.", "D. Ethambutol."],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Le premier germe responsable de l'infection chez le nouveau-né est :",
+        "options": [
+          "A. Streptocoque D.",
+          "B. Listeria.",
+          "C. Staphylocoque doré.",
+          "D. E.Coli."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      }
+    ],
+    "Ictère du nouveau-né": [
+      {
+        "question": "Parmi les causes de l'ictère néonatal, laquelle est le plus souvent rencontrée chez le prématuré :",
+        "options": [
+          "A. Incompatibilité rhésus.",
+          "B. Immaturité hépatique.",
+          "C. Déficit en G6PD.",
+          "D. Atrésie des voies biliaires."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Parmi les éléments énumérés ci-dessous, qui expliquent la survenue de l'ictère simple chez le nouveau-né prématuré, un facteur n'est pas impliqué, lequel ?",
+        "options": [
+          "A. Immaturité hépatique.",
+          "B. Fragilité érythrocytaire.",
+          "C. Hypoalbuminémie.",
+          "D. Cholémie familiale."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Parmi les séquelles que peut laisser une hyperbilirubinémie libre négligée de la période néonatale, une est fausse :",
+        "options": ["A. Microcéphalie.", "B. Athétose.", "C. Epilepsie.", "D. Surdité."],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Parmi les propositions suivantes, indiquez celle qui est correcte :",
+        "options": [
+          "A. L'ictère physiologique du nouveau-né est un ictère à bilirubine conjuguée.",
+          "B. L'ictère par incompatibilité Rh apparait après 24 heures de vie.",
+          "C. La photothérapie par la lumière bleue active la glycuronoconjugaison.",
+          "D. Aucune des propositions précédentes n'est exacte."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Un ictère est apparu avant la 12ème heure de vie chez un nouveau-né, la cause non susceptible d'expliquer cet ictère est :",
+        "options": [
+          "A. Infection materno-fœtale.",
+          "B. Incompatibilité rhésus.",
+          "C. Obstruction digestive.",
+          "D. Immaturité hépatique."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "L'ictère néonatal par incompatibilité rhésus, une réponse est fausse parmi les suivantes, laquelle ?",
+        "options": [
+          "A. Survient si la mère est Rh+ et l'enfant est Rh-.",
+          "B. Est un ictère présent dès la naissance.",
+          "C. Est un ictère potentiellement dangereux.",
+          "D. Est un ictère à bilirubine libre."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Cochez la réponse fausse :",
+        "options": [
+          "A. L'ictère au lait de femme est un ictère simple.",
+          "B. L'ictère physiologique apparait après 72 heures de vie.",
+          "C. L'ictère nucléaire est réversible.",
+          "D. L'ictère précoce survient avant 36 heures."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      }
+    ],
+    "Détresse respiratoire du nouveau-né": [
+      {
+        "question": "Dans la maladie des membranes hyalines le traitement spécifique fait appel à :",
+        "options": ["A. Antibiotiques.", "B. Corticoides.", "C. Aspiration.", "D. Surfactant."],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Chez le fœtus, les alvéoles sont remplies de :",
+        "options": ["A. Oxygène.", "B. Air carbonique.", "C. Gaz.", "D. Liquide."],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Devant une détresse respiratoire néonatale attribuée à une inhalation de liquide amniotique méconial, quel est le premier geste à faire chez le nouveau-né :",
+        "options": [
+          "A. Mettre l'enfant sous antibiotiques.",
+          "B. Chercher une imperforation ano-rectale.",
+          "C. Faire une aspiration trachéo-bronchique.",
+          "D. Faire une radiographie thoraco-abdominale."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Le diagnostic de maladie des membranes hyalines doit être évoqué devant les éléments suivants, à l'exception d'un seul, lequel ?",
+        "options": [
+          "A. Détresse respiratoire progressivement croissante avec signe de rétraction.",
+          "B. Age gestationnel < 34 SA.",
+          "C. Début à 48 H de vie.",
+          "D. Bronchogramme aérique radiologique."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Un nourrisson de 10 mois présente une polypnée à 52 cycles/min, sibilants inspiratoires et expiratoires, un tirage modéré et une cyanose péri-buccale au repos. Selon le score de BIERMANN et PIERSON vous considérez que cet enfant présente :",
+        "options": [
+          "A. Une détresse respiratoire modérée.",
+          "B. Une détresse respiratoire légère.",
+          "C. Une détresse respiratoire sévère.",
+          "D. (Option manquante)"
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Un nouveau-né à terme a une fréquence respiratoire à :",
+        "options": ["A. 24 cycles/min.", "B. 40 cycles/min.", "C. 70 cycles/min.", "D. 60 cycles/min."],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Le nouveau-né sain respire par :",
+        "options": ["A. Le nez.", "B. La bouche.", "C. La bouche fermée.", "D. La bouche ouverte."],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Le score de SILVERMAN comporte :",
+        "options": ["A. 4 items.", "B. 5 items.", "C. 6 items.", "D. 3 items."],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "La maladie des membranes hyalines chez le nouveau-né survient chez :",
+        "options": [
+          "A. Le post mature.",
+          "B. Le nouveau-né à terme.",
+          "C. Le prématuré.",
+          "D. Le nouveau-né par césarienne."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      }
+    ],
+    "Malformations digestives du nouveau-né": [
+      {
+        "question": "Chez un nouveau-né, quel est le symptôme constamment retrouvé qui doit faire immédiatement suspecter le diagnostic d'atrésie de l'œsophage dès les premières minutes de la vie :",
+        "options": ["A. Hypersialorrhée.", "B. Cyanose.", "C. Vomissements.", "D. Toux."],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "La masse abdomino-pelvienne est :",
+        "options": [
+          "A. Une masse développée dans la cavité abdomino-pelvienne.",
+          "B. Un gonflement d'une de ses parties.",
+          "C. Une augmentation de son volume.",
+          "D. Toutes les réponses sont correctes."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "L'examen de l'abdomen chez l'enfant au cours d'une consultation ordinaire est systématique à la recherche de :",
+        "options": [
+          "A. Une tumeur abdomino-pelvienne qui sont de plus en plus fréquentes.",
+          "B. Un météorisme.",
+          "C. Un tympanisme.",
+          "D. Une défense."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "La nature des tumeurs abdomino-pelviennes chez l'enfant est :",
+        "options": [
+          "A. Bénigne.",
+          "B. Maligne.",
+          "C. Bénigne et maligne parfois malformative.",
+          "D. Toutes les réponses sont correctes."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Dans une atrésie de l'œsophage type III on trouve sur la radiographie thoracique et abdominale :",
+        "options": [
+          "A. Une ascension du diaphragme gauche.",
+          "B. De l'air dans l'estomac et l'intestin.",
+          "C. De l'air uniquement dans l'estomac.",
+          "D. Un abdomen totalement opaque."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Quelle est l'investigation qui permettra le mieux le diagnostic d'une atrésie de l'œsophage ?",
+        "options": [
+          "A. Radiographie pulmonaire.",
+          "B. Introduction d'une petite sonde souple dans l'œsophage.",
+          "C. Echographie.",
+          "D. Radiographie abdominale."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Quel est le signe observé au cours de la grossesse qui aide au diagnostic d'une atrésie de l'œsophage à la naissance ?",
+        "options": [
+          "A. Oligoamnios.",
+          "B. Hydramnios.",
+          "C. Dilatation gastrique à l'échographie.",
+          "D. Image en double bulle à l'échographie."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Un nouveau-né vomit vert avant toute tentative d'alimentation, une distension épigastrique est notée à l'inspection. Une petite selle méconiale est émise. Quel est le diagnostic le plus probable ?",
+        "options": [
+          "A. Une atrésie de l'œsophage.",
+          "B. Une atrésie colique.",
+          "C. Sténose duodénale.",
+          "D. Une hernie diaphragmatique."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Quelle est la malformation digestive la plus fréquente chez un nouveau-né trisomique 21 ?",
+        "options": [
+          "A. L'imperforation anale.",
+          "B. L'atrésie duodénale.",
+          "C. L'atrésie de l'œsophage.",
+          "D. Le mésentère commun."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Quelle est l'occlusion néonatale qui peut s'accompagner d'une nécrose ischémique partielle ou totale de l'intestin grêle :",
+        "options": [
+          "A. Iléus méconial.",
+          "B. Volvulus sur mésentère commun.",
+          "C. Maladie de Hirschsprung.",
+          "D. Atrésie duodénale."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Quel est l'examen qui permet d'affirmer une maladie de Hirschsprung ?",
+        "options": [
+          "A. Le lavement opaque.",
+          "B. La manométrie ano-rectale.",
+          "C. La biopsie rectale.",
+          "D. La montée d'une sonde rectale."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Parmi les occlusions néonatales basses, une de ces étiologies suivantes peut se compliquer d'une entérocolite gravissime, voire mortelle, imposant toujours un traitement en urgence, laquelle ?",
+        "options": [
+          "A. Maladie de Hirschsprung.",
+          "B. Atrésie iléale.",
+          "C. Iléus méconial.",
+          "D. Le bouchon méconial."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Parmi les malformations suivantes, quelle(s) est(sont) celle(s) à rechercher systématiquement en salle de naissance :",
+        "options": [
+          "A. Maladie de Hirschsprung.",
+          "B. Atrésie de l'œsophage.",
+          "C. Imperforation anale.",
+          "D. Hernie diaphragmatique."
+        ],
+        "correct_option_ids": [1, 2],
+        "explanation": ""
+      },
+      {
+        "question": "La sténose hypertrophique du pylore :",
+        "options": [
+          "A. Fréquente chez les filles.",
+          "B. L'existence d'un intervalle libre de 3 à 5 semaines.",
+          "C. Crises paroxystiques, arrêt des matières et des gaz ou rectorragies.",
+          "D. L'échographie confirme le diagnostic : image en cocarde."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Le RGO :",
+        "options": [
+          "A. Le TOGD est le premier examen à pratiquer.",
+          "B. Une hernie hiatale est la cause la plus fréquente d'un RGO simple.",
+          "C. Le traitement repose sur le fractionnement et l'épaississement des repas, la posture en décubitus dorsal à 30°.",
+          "D. Aucune réponse n'est juste."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      }
+    ],
+    "Croissance": [
+      {
+        "question": "L'examen clinique d'un nourrisson de 12 mois : Poids 7.5 kg / Taille 75 cm / PC 47 cm, à la naissance, son poids était à 3.5 Kg / sa taille à 50 cm / son PC à 35 cm, pour ce nourrisson :",
+        "options": [
+          "A. Ses données anthropométriques de naissance sont bonnes.",
+          "B. Retard de croissance pondérale.",
+          "C. L'accroissement de son PC est normal.",
+          "D. Il présente un retard de sa croissance staturo-pondérale."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Durant la phase de croissance pubertaire :",
+        "options": [
+          "A. La croissance staturale est normale en présence d'un retard pubertaire.",
+          "B. Le pic de croissance est plus précoce chez la fille que chez le garçon.",
+          "C. La qualité de la maturation osseuse n'a pas d'intérêt dans le suivi de la croissance.",
+          "D. L'hormone de croissance est la seule responsable du gain statural."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Pour la régulation de la croissance :",
+        "options": [
+          "A. Les hormones thyroïdiennes n'interviennent qu'après la naissance.",
+          "B. Les facteurs génétiques définissent à eux seuls la taille définitive d'un individu.",
+          "C. L'équilibre de la balance phosphocalcique est important pour une croissance optimale.",
+          "D. La qualité des apports nutritionnels influence largement la croissance durant les deux premières années de vie."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Un prématuré est un nouveau-né né avant :",
+        "options": [
+          "A. 41 semaines de gestation.",
+          "B. 42 semaines de gestation.",
+          "C. 38 semaines de gestation.",
+          "D. 37 semaines de gestation."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "À l'âge de 12 mois, le nourrisson :",
+        "options": [
+          "A. Double son poids de naissance.",
+          "B. Progresse de 12 cm par rapport à sa taille à la naissance.",
+          "C. Il peut avoir un PC à 47 cm.",
+          "D. Quadruple son poids de naissance."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Pendant les 3 premiers mois, le PC progresse de :",
+        "options": ["A. 0.5 cm par mois.", "B. 01 cm par mois.", "C. 02 cm par mois.", "D. 1.5 cm par mois."],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Pendant la 2ème année, la taille d'un nourrisson progresse de :",
+        "options": ["A. 25cm.", "B. 12cm.", "C. 06cm.", "D. 17cm."],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Parmi les signes suivants, lequel est alarmant ?",
+        "options": [
+          "A. Une taille < -2DS.",
+          "B. 01 an de retard de l'âge osseux.",
+          "C. Une vitesse de croissance ralentie.",
+          "D. 1.5 DS de retard par rapport à la taille cible."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Les signes alarmants à la naissance :",
+        "options": [
+          "A. Aucune réaction aux bruits forts de façon unilatérale.",
+          "B. Un périmètre crânien ≤ 36 cm.",
+          "C. Une tête en opisthotonos.",
+          "D. Une prématurité sans cause évidente."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Un nourrisson de 05 mois : Poids 7.1 kg / Taille 62 cm / PC 47 cm, à la naissance, son poids était à 3.5 kg / sa taille à 50 cm / son PC à 35 cm, pour ce nourrisson toutes ces propositions sont justes sauf une, laquelle ?",
+        "options": [
+          "A. La croissance staturale est normale.",
+          "B. Un retard de croissance pondérale.",
+          "C. L'accroissement de son PC est pathologique.",
+          "D. Les paramètres anthropométriques de naissance sont dans les normes."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Durant la phase de croissance pubertaire :",
+        "options": [
+          "A. La croissance staturale est normale en présence d'un retard pubertaire.",
+          "B. Différence de gain statural selon le sexe.",
+          "C. La qualité de la maturation osseuse n'a pas d'intérêt dans le suivi de la croissance durant cette phase.",
+          "D. L'hormone de croissance est la seule responsable du gain statural."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Toutes les données suivantes sur la croissance sont justes sauf une, laquelle ?",
+        "options": [
+          "A. Le nourrisson double son poids à 05 mois et le triple à 12 mois.",
+          "B. Le PC augmente de 01 cm/mois au 6ème mois.",
+          "C. Les premières dents de lait apparaissent aux alentours du 6ème mois.",
+          "D. La progression de la taille est de 25 cm la première année de vie."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Quelle est (sont) parmi les pathologies suivantes celle(s) qui peut (peuvent) entrainer un retard de la croissance staturale ?",
+        "options": [
+          "A. La maladie cœliaque.",
+          "B. Syndrome de TURNER.",
+          "C. Diabète de type 1 équilibré.",
+          "D. Craniopharyngiome."
+        ],
+        "correct_option_ids": [0, 1, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Les signes alarmants à la naissance :",
+        "options": [
+          "A. Aucune réaction aux bruits forts de façon uni ou bilatérale.",
+          "B. Un périmètre crânien > 40cm.",
+          "C. Une tête en opisthotonos.",
+          "D. Présence des réflexes archaïques."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "La croissance durant la petite enfance :",
+        "options": [
+          "A. Est largement influencée par la qualité nutritionnelle.",
+          "B. Les facteurs génétiques n'ont pas d'influence sur la croissance.",
+          "C. La croissance est très rapide.",
+          "D. Les mensurations de naissance n'ont pas d'intérêt au cours de la surveillance de la croissance."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Toutes les données suivantes sur la croissance sont justes sauf une, laquelle ?",
+        "options": [
+          "A. Le nourrisson double son poids à 07 mois et le triple à 14 mois.",
+          "B. Le PC augmente de 01 cm/mois du 3ème au 6ème mois.",
+          "C. Les premières dents de lait apparaissent aux alentours du 6ème mois.",
+          "D. La progression de la taille est de 25 cm la première année de vie."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Un nouveau-né à terme est dit eutrophique s'il pèse :",
+        "options": ["A. 5000 g.", "B. 2000g.", "C. 4600g.", "D. 3000g."],
+        "correct_option_ids": [3],
+        "explanation": ""
+      }
+    ],
+    "Développement psychomoteur": [
+      {
+        "question": "Lors de la recherche du réflexe de Moro chez le nouveau-né normal à terme, on observe la réponse à la mobilisation rapide de la nuque au niveau :",
+        "options": ["A. Des yeux.", "B. Des membres inférieurs.", "C. Des membres supérieurs.", "D. Des quatre membres."],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "L'évaluation du tonus axial se fait par :",
+        "options": [
+          "A. La mesure des angles.",
+          "B. La manœuvre de foulard.",
+          "C. La manœuvre du tirer-assis.",
+          "D. Réflexe de MORO."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Parmi les signes du développement psychomoteurs suivants, un est pathologique :",
+        "options": [
+          "A. Pas de peur des visages étrangers à l'âge de 10 mois.",
+          "B. Position assise sans appui à l'âge de 08 mois.",
+          "C. Marche à l'âge de 14 mois.",
+          "D. Tenue de la tête à l'âge de 03 mois."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Un développement psychomoteur normal se traduit par :",
+        "options": [
+          "A. Renforcement du tonus périphérique et axial.",
+          "B. Renforcement du tonus périphérique et relâchement du tonus axial.",
+          "C. Renforcement du tonus axial et relâchement du tonus périphérique.",
+          "D. Relâchement du tonus périphérique et axial."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Chez un nouveau-né normal, cocher les réponses justes :",
+        "options": [
+          "A. Une quadri-flexion spontanée est un signe de maturité.",
+          "B. Le réflexe de succion-déglutition peut être absent de façon physiologique chez le prématuré.",
+          "C. Une attitude en opisthotonos est toujours pathologique.",
+          "D. Les conditions d'examen clinique n'interfèrent pas avec ses résultats."
+        ],
+        "correct_option_ids": [0, 1, 2],
+        "explanation": ""
+      },
+      {
+        "question": "Ce qui est pathologique lors de l'examen d'un nourrisson de 06 mois :",
+        "options": [
+          "A. Ne tient pas sa tête.",
+          "B. Ne s'assied qu'avec aide.",
+          "C. Le réflexe de marche automatique est présent.",
+          "D. La préhension est cubito-palmaire."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Lors d'une évaluation du DPM : cocher les réponses fausses",
+        "options": [
+          "A. Les résultats sont toujours prononcés de façon définitive.",
+          "B. Aucune exploration n'est indiquée si troubles du langage seulement.",
+          "C. La présence de la mère est facultative.",
+          "D. C'est un motif très fréquent de consultation pédiatrique."
+        ],
+        "correct_option_ids": [0, 1, 2],
+        "explanation": ""
+      },
+      {
+        "question": "Le développement psychomoteur dépend :",
+        "options": [
+          "A. Du mode d'accouchement (voie haute ou basse).",
+          "B. La dotation génétique des 02 parents.",
+          "C. Pathologies aiguës.",
+          "D. Paramètres anthropométriques à la naissance."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Le développement psychomoteur dépend :",
+        "options": [
+          "A. Du mode d'accouchement (voie haute ou basse).",
+          "B. La dotation génétique des 02 parents.",
+          "C. Pathologies aiguës.",
+          "D. Déroulement de la grossesse."
+        ],
+        "correct_option_ids": [1, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Un retard des acquisitions psychomotrices est fortement évoqué chez un nourrisson de 08 mois :",
+        "options": [
+          "A. Position en décubitus dorsal sans changement de position (en décubitus latéral ou ventral).",
+          "B. Une tête en poupée de chiffon.",
+          "C. Mains fermées en permanence pouce dedans.",
+          "D. La non acquisition de la position debout."
+        ],
+        "correct_option_ids": [0, 2],
+        "explanation": ""
+      },
+      {
+        "question": "Un nourrisson est examiné en PMI, il marche tenu par les 2 mains, saisit un objet qu'on lui tend et a un relâchement fin et précis, il dit 2 à 3 mots, et selon la mère boit à la tasse et mange avec ses doigts, ce nourrisson est âgé alors de :",
+        "options": ["A. 08 mois.", "B. 10 mois.", "C. 12 mois.", "D. 15 mois."],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Parmi les signes du développement psychomoteurs suivants, un est pathologique :",
+        "options": [
+          "A. Pas de peur des visages étrangers à l'âge de 05 mois.",
+          "B. Position assise sans appui à l'âge de 08 mois.",
+          "C. Marche à l'âge de 14 mois.",
+          "D. Tenue de la tête à l'âge de 06 mois."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Un angle poplité à 120° à la naissance doit faire évoquer :",
+        "options": [
+          "A. Une hypotonie des membres inférieurs.",
+          "B. Une hypotonie des membres inférieurs.",
+          "C. Une hypotonie axiale.",
+          "D. (Option manquante)"
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Toutes les conditions suivantes peuvent retentir sur le développement psychomoteur d'un nourrisson sauf une :",
+        "options": [
+          "A. Accouchement dystocique.",
+          "B. Ictère nucléaire néo-natal.",
+          "C. Prématurité.",
+          "D. Allaitement artificiel."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "La qualité du développement psychomoteur du nourrisson :",
+        "options": [
+          "A. Est dépendante des conditions de déroulement de la grossesse et de l'accouchement.",
+          "B. S'apprécie à la naissance par le score d'APGAR.",
+          "C. Est pathologique en absence de la marche à 20 mois.",
+          "D. Est influencée par la qualité stimulatrice de l'environnement."
+        ],
+        "correct_option_ids": [0, 2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Un nourrisson de 08 mois qui tient sa position assise sans appui, joue avec un objet et le fait passer d'une main à l'autre, ne vocalise pas et présente un désintérêt pour son entourage :",
+        "options": [
+          "A. Ses acquisitions motrices sont normales.",
+          "B. Son développement sensoriel est normal.",
+          "C. Une anomalie de l'audition est très probable chez lui.",
+          "D. Nécessite une surveillance seule."
+        ],
+        "correct_option_ids": [0, 2],
+        "explanation": ""
+      },
+      {
+        "question": "Les signes d'alarmes lors d'un examen de nourrisson :",
+        "options": [
+          "A. Des réflexes spontanés en quadriflexion.",
+          "B. Une tête ballante après l'âge de 04 mois.",
+          "C. Une hypertonie des membres au-delà de 07 mois.",
+          "D. Pas de marche à 15 mois."
+        ],
+        "correct_option_ids": [1, 2],
+        "explanation": ""
+      },
+      {
+        "question": "Chez le nouveau-né à terme :",
+        "options": [
+          "A. Son attitude spontanée en quadriflexion.",
+          "B. Seules les membres inférieurs ont le retour en flexion après relâchement de l'extension.",
+          "C. Le coude n'atteint pas la ligne médiane.",
+          "D. La manœuvre du tirer-assis teste la contraction active des fléchisseurs de la tête."
+        ],
+        "correct_option_ids": [0, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Un nourrisson de 03 mois est capable de :",
+        "options": [
+          "A. Sourire à l'examinateur.",
+          "B. D'orienter sa tête vers le bruit.",
+          "C. De suivre des yeux un objet sur 90°.",
+          "D. En position assise, il tient droit sa tête."
+        ],
+        "correct_option_ids": [0, 1, 2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Les signes d'alarmes chez un nouveau-né à terme parmi les suivants :",
+        "options": [
+          "A. Poings ouverts en permanence pouce dans les pommes.",
+          "B. Microcéphalie congénitale.",
+          "C. Hypotonie axiale ou opisthotonos.",
+          "D. Pleurs incessants."
+        ],
+        "correct_option_ids": [1, 2],
+        "explanation": ""
+      },
+      {
+        "question": "L'étude du tonus chez le nouveau-né fait appel à :",
+        "options": [
+          "A. L'observation de la posture spontanée.",
+          "B. Retour en flexion des 04 membres.",
+          "C. Manœuvre du tiré-assis et épreuve de redressement.",
+          "D. Réflexe de la marche automatique."
+        ],
+        "correct_option_ids": [0, 2],
+        "explanation": ""
+      },
+      {
+        "question": "Un nourrisson de 03 mois est capable de :",
+        "options": [
+          "A. Sourire à l'examinateur.",
+          "B. D'orienter sa tête vers le bruit.",
+          "C. De suivre des yeux un objet sur 180°.",
+          "D. En position assise, il tient droit sa tête."
+        ],
+        "correct_option_ids": [0, 1, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Les réflexes archaïques :",
+        "options": [
+          "A. Sont présents chez tous nouveau-né qu'il soit à terme ou prématuré.",
+          "B. Sont présent seulement durant les 05 premiers mois de la vie.",
+          "C. Leurs persistances au-delà de 05 mois est toujours pathologique.",
+          "D. Leurs persistances au-delà de 01 an n'est pas importante."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      }
+    ],
+    "Vaccinations": [
+      {
+        "question": "Toutes les propositions suivantes sont justes sauf une, laquelle ?",
+        "options": [
+          "A. Tous les vaccins sont contre-indiqués chez les enfants atteints d'un déficit immunitaire congénital.",
+          "B. Les affections fébriles représentent une contre-indication temporaire aux vaccins.",
+          "C. Les incidents qui font suite à une vaccination doivent être déclarés.",
+          "D. La vaccination par le BCG est systématique pour tout nouveau-né quel que soit son poids de naissance."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Parmi les propositions suivantes concernant le BCG, indiquer la (ou les) réponses exactes :",
+        "options": [
+          "A. Il entraine une immunité de type cellulaire.",
+          "B. Est un vaccin bactérien inactivé.",
+          "C. Il est recommandé seulement chez le nouveau-né né à terme.",
+          "D. Nécessite un rappel obligatoire pour tous les enfants vers l'âge de 06 mois."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "En matière de vaccination, la réponse secondaire est :",
+        "options": [
+          "A. Plus rapide.",
+          "B. Titres d'anticorps plus élevés.",
+          "C. Capacités neutralisantes augmentées.",
+          "D. Toutes les réponses sont justes."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Les vaccins vivants atténués sont :",
+        "options": [
+          "A. BCG, antipolio injectable, anti-rougeoleux, anticoquelucheux.",
+          "B. BCG, antipolio oral, antirougeoleux, anti-ourlien, anti-rubéole.",
+          "C. Contre-indiqués en cas de déficit immunitaire.",
+          "D. Autorisés chez l'enfant recevant une corticothérapie prolongée."
+        ],
+        "correct_option_ids": [1, 2],
+        "explanation": ""
+      },
+      {
+        "question": "Les nouveaux vaccins introduits dans le calendrier vaccinal algérien 2016 :",
+        "options": [
+          "A. Antipolio injectable.",
+          "B. Antiméningocoque.",
+          "C. Anti-ourlien+antirubéole (ROR).",
+          "D. Antipneumocoque."
+        ],
+        "correct_option_ids": [0, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Toutes les propositions suivantes sont justes sauf une, laquelle ?",
+        "options": [
+          "A. La réponse immunitaire à un vaccin est dépendante du type de vaccin, âge d'introduction et statut immunologique de l'enfant.",
+          "B. Les affections fébriles représentent une contre-indication temporaire aux vaccins.",
+          "C. Une encéphalopathie évolutive est une contre-indication temporaire aux vaccins.",
+          "D. Les vaccins polysaccharidiques n'entrainent pas de mémoire antigénique."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "La vaccination par le BCG :",
+        "options": [
+          "A. A pour objectif de protéger contre les formes graves de tuberculose.",
+          "B. L'enfant vacciné par le BCG en contact avec un tuberculeux ne présente aucun risque de développer une tuberculose pulmonaire.",
+          "C. Le vaccin est donné par voie sous-cutanée.",
+          "D. Il s'agit d'un vaccin bactérien tué."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "En matière de vaccination, la réponse secondaire :",
+        "options": [
+          "A. Est une réaction immunitaire constante pour tous les vaccins.",
+          "B. Elle est plus rapide mais moins durable que la réponse primaire.",
+          "C. Fait intervenir des cellules de type LT, LB.",
+          "D. Le type d'anticorps est IgG."
+        ],
+        "correct_option_ids": [2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Toutes les propositions suivantes sont justes sauf une, laquelle ?",
+        "options": [
+          "A. La réponse immunitaire à un vaccin est dépendante du type de vaccin, âge d'introduction et statut immunologique de l'enfant.",
+          "B. Les affections fébriles représentent une contre-indication temporaire aux vaccins.",
+          "C. Une encéphalopathie évolutive est une contre-indication au vaccin anticoquelucheux.",
+          "D. Le vaccin anti-hémophilus protège contre les méningites à Haemophilus."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Toutes les propositions suivantes sont justes sauf une, laquelle ? :",
+        "options": [
+          "A. Tous les vaccins vivants atténués sont contre-indiqués chez les enfants atteints d'un déficit immunitaire.",
+          "B. Les affections fébriles représentent une contre-indication temporaire aux vaccins.",
+          "C. Une encéphalopathie évolutive ne contre-indique aucun vaccin.",
+          "D. Un enfant sous corticothérapie ne doit être vacciné par les vaccins vivants atténués qu'après l'arrêt des corticoïdes."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Les vaccins préconisés à la naissance selon le calendrier vaccinal national :",
+        "options": [
+          "A. DTCOQ + BCG + Polio.",
+          "B. DTCOQ + Hib + Polio.",
+          "C. BCG + Polio + Hib.",
+          "D. BCG + polio + HBV."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Quels sont parmi ces vaccins ceux qui sont cultivés sur œuf de poule :",
+        "options": [
+          "A. Anti-ourlien.",
+          "B. Antirougeoleux.",
+          "C. Antigrippal.",
+          "D. Antidiphtérique."
+        ],
+        "correct_option_ids": [0, 1, 2],
+        "explanation": ""
+      },
+      {
+        "question": "Le vaccin antipneumococcique n'est pas indiqué chez :",
+        "options": [
+          "A. Une personne atteinte de syndrome néphrotique.",
+          "B. En cas de déficit immunitaire.",
+          "C. Le splénectomisé.",
+          "D. Le diabétique."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      }
+    ],
+    "Diététique de l'enfant & Allaitement maternel": [
+      {
+        "question": "Concernant la diversification alimentaire :",
+        "options": [
+          "A. Elle se fait à l'âge de 06 mois chez le nourrisson sous allaitement maternel.",
+          "B. Peut être entamée à l'âge de 03 mois en cas d'hypotrophie avec une farine sans gluten.",
+          "C. L'introduction des fruits précède de préférence celle des légumes.",
+          "D. L'introduction du gluten se fait à l'âge de 09 mois."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Pour l'allaitement maternel, quelle(s) est(sont) la(les) proposition(s) juste(s) :",
+        "options": [
+          "A. Si un bébé a de la diarrhée il est préférable de suspendre l'allaitement maternel durant la période de la diarrhée.",
+          "B. Si une mère qui allaite a de la fièvre, elle ne doit pas allaiter.",
+          "C. L'hépatite C chez la mère est une contre-indication formelle à l'allaitement maternel.",
+          "D. La galactosémie congénitale est une contre-indication formelle."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Le lait maternel :",
+        "options": [
+          "A. Présente une UPN égale à celle du lait artificiel.",
+          "B. Protéines du lactosérum représentent 65% du total des protéines.",
+          "C. Apporte 40g/l de lipides avec 5% d'acide linoléique.",
+          "D. Très riche en sodium."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Pour l'allaitement maternel :",
+        "options": [
+          "A. La phénylcétonurie est une contre-indication.",
+          "B. La mère doit passer à un lait artificiel en présence des crevasses au niveau des mamelons.",
+          "C. La diversification est plus précoce qu'au cours de l'allaitement artificiel.",
+          "D. Le colostrum est très riche en facteurs d'immunité."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Ne doit pas allaiter toute mère atteinte d'une infection virale type :",
+        "options": [
+          "A. VIH.",
+          "B. CMV.",
+          "C. Hépatite virale B.",
+          "D. Hépatite virale C."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Un nourrisson âgé de 08 mois pesant 10 Kg sous allaitement artificiel :",
+        "options": [
+          "A. Sa ration journalière est 1000 cc de lait de 1er âge donnée à raison de 250cc/biberon.",
+          "B. Le nombre de biberons par jour est de 4.",
+          "C. Sa ration journalière est 1200 cc de lait de 2ème âge.",
+          "D. Le nombre de biberons est de 4, avec 220ml/biberon."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Concernant la diversification alimentaire :",
+        "options": [
+          "A. Elle se fait à l'âge de 06 mois chez le nourrisson sous allaitement maternel.",
+          "B. Peut être entamée à l'âge de 04 mois.",
+          "C. L'introduction des fruits précède celle des légumes.",
+          "D. L'introduction du gluten se fait au 5ème mois."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Le lait maternel :",
+        "options": [
+          "A. Présente une UPN < à celle du lait artificiel.",
+          "B. Est riche en caséine/protéines du lactosérum.",
+          "C. Le lactose est le sucre essentiel.",
+          "D. Très riche en sodium."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Un nourrisson âgé de 04 mois pesant 6 Kg sous allaitement artificiel :",
+        "options": [
+          "A. Sa ration journalière est 1000 cc de lait de 1er âge donnée à raison de 250cc/biberon.",
+          "B. Le nombre de biberons par jour est de 4.",
+          "C. Sa ration journalière est 800 cc de lait de 1er âge.",
+          "D. Le nombre de biberons est de 5, avec 160ml/biberon."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Concernant la diversification alimentaire :",
+        "options": [
+          "A. Elle se fait à l'âge de 06 mois chez le nourrisson sous allaitement maternel.",
+          "B. Peut être entamée à l'âge de 03 mois en cas d'hypotrophie.",
+          "C. L'introduction des fruits précède celle des légumes.",
+          "D. L'introduction du gluten est retardée au 9ème mois."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "En matière de diversification alimentaire :",
+        "options": [
+          "A. L'âge de diversification doit être différé après l'âge de 06 mois pour les nourrissons à risque atopique.",
+          "B. Chez les nourrissons ayant un terrain d'atopie familiale, l'introduction de poissons et des œufs doit être bien repoussée après l'âge de 01 an.",
+          "C. Chez les nourrissons ayant un terrain d'atopie familiale, l'introduction de l'arachide et des fruits à coque doit être bien repoussée après l'âge de 03 ans.",
+          "D. La diversification doit se faire entre 04 et 06 mois pour tous les nourrissons en présence ou non d'une atopie familiale."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Le rapport caséine/lactalbumine du lait maternel est de :",
+        "options": ["A. 4/6.", "B. 4/8.", "C. 6/4.", "D. 8/4."],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Le lait de la mère peut être conservé au réfrigérateur pendant :",
+        "options": ["A. 08 heures.", "B. 12 heures.", "C. 24 heures.", "D. 48 heures."],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Le blanc d'œuf peut être introduit chez le nourrisson à l'âge de :",
+        "options": ["A. 06 mois.", "B. 07 mois.", "C. 12 mois.", "D. 13 mois."],
+        "correct_option_ids": [2],
+        "explanation": ""
+      }
+    ],
+    "Malnutrition Protéino-Énergétique (MPE)": [
+      {
+        "question": "Pour la MPE :",
+        "options": [
+          "A. Le Kwashiorkor marastique est de loin la forme la plus sévère.",
+          "B. Est sévère si le poids / poids normal pour l'âge est > 60% selon la classification de GOMEZ.",
+          "C. Le syndrome œdémateux est un signe capital dans le marasme.",
+          "D. Les signes cutanéomuqueux sont plus spécifiques au kwashiorkor."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Le traitement de la MPE sévère :",
+        "options": [
+          "A. Une stabilisation avec réhydratation sur 24 heures.",
+          "B. Réalimentation dès la correction des troubles hydro-électrolytiques par des formules diététiques hypercaloriques hyperprotidiques.",
+          "C. En présence d'une insuffisance cardiaque on prescrit des diurétiques associés aux digitaliques.",
+          "D. Adjonction des sels minéraux, d'oligoéléments et des vitamines nécessaires durant la première semaine."
+        ],
+        "correct_option_ids": [0, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Les fonctions gastro-intestinales sont très perturbées dans la MPE par :",
+        "options": [
+          "A. Abrasion des villosités intestinales.",
+          "B. Infections bactériennes et parasitaires.",
+          "C. Diminution de la motilité intestinale.",
+          "D. Toutes les réponses sont justes."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Une MPE sévère se définit par :",
+        "options": [
+          "A. Un poids < 80% par rapport à la normale pour la taille selon la classification de Waterlow.",
+          "B. Un poids entre 60-74% du poids normal pour l'âge selon la classification de Gomez.",
+          "C. Un poids < 60% du poids normal pour l'âge selon la classification de Gomez.",
+          "D. Une carence calorique globale avec des altérations clinico-biologiques importantes."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      }
+    ],
+    "Vomissements du nourrisson": [
+      {
+        "question": "Parmi les propositions suivantes quelle(s) est (sont) celle(s) que vous retenez :",
+        "options": [
+          "A. Les vomissements de la sténose hypertrophique du pylore sont bilieux dans les formes les plus sévères.",
+          "B. L'allergie aux protéines du lait de vache doit être évoquée chez le nourrisson vomisseur chronique après l'âge de 06 mois.",
+          "C. Une atrésie duodénale est évoquée devant des vomissements bilieux chez le nouveau-né.",
+          "D. La maladie de Hirschsprung entraîne une occlusion haute avec vomissements précoces et abdomen plat."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Devant des vomissements aigus dans un contexte fébrile chez un nourrisson qui présente en plus une hypotonie avec refus d'alimentation :",
+        "options": [
+          "A. L'hospitalisation n'est pas nécessaire.",
+          "B. La ponction lombaire est indiquée.",
+          "C. Aucun bilan n'est indiqué.",
+          "D. Le RGO est le premier diagnostic à évoquer."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Pour les vomissements chez le nouveau-né :",
+        "options": [
+          "A. L'aspect bilieux nécessite toujours un avis de chirurgie.",
+          "B. Le RGO est une cause fréquente de vomissements chroniques.",
+          "C. La recherche d'une étiologie est systématique avant le traitement.",
+          "D. Toutes les propositions sont justes."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Toutes les pathologies suivantes peuvent entraîner des vomissements aigus chez le nourrisson sauf une :",
+        "options": [
+          "A. Maladie cœliaque.",
+          "B. Infection cérébro-méningée.",
+          "C. Rachitisme carentiel.",
+          "D. Mauvaise reconstitution des biberons."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Un enfant âgé de 06 ans amené aux urgences pédiatriques pour des vomissements évoluant depuis 24 heures associant des douleurs abdominales dans un contexte fébrile, parmi les propositions suivantes, quels sont les diagnostics qu'on pourra évoquer ?",
+        "options": [
+          "A. Infection ORL.",
+          "B. Urgence chirurgicale abdominale.",
+          "C. Une méningo-encéphalite.",
+          "D. Une infection urinaire."
+        ],
+        "correct_option_ids": [1, 2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Un nouveau-né vomit vert avant toute tentative d'alimentation, une distension épigastrique est notée à l'inspection, une petite selle méconiale est émise. Quel est le diagnostic le plus probable ?",
+        "options": [
+          "A. Une atrésie de l'œsophage.",
+          "B. Une atrésie colique.",
+          "C. Sténose duodénale.",
+          "D. Une hernie diaphragmatique."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      }
+    ],
+    "Maladie cœliaque": [
+      {
+        "question": "Le diagnostic de la maladie cœliaque doit être évoqué devant :",
+        "options": [
+          "A. Diarrhée en bouse de vache.",
+          "B. Un syndrome de malabsorption initiale.",
+          "C. Un retard staturo-pondéral.",
+          "D. Pneumopathies à répétition."
+        ],
+        "correct_option_ids": [1, 2],
+        "explanation": ""
+      },
+      {
+        "question": "La confirmation du diagnostic de la maladie cœliaque :",
+        "options": [
+          "A. HLA à risque obligatoire.",
+          "B. Anticorps anti-transglutaminase de type IgA en absence de déficit dans les IgA.",
+          "C. L'atrophie villositaire totale ou subtotale en biopsie intestinale.",
+          "D. La clinique évocatrice est suffisante."
+        ],
+        "correct_option_ids": [1, 2],
+        "explanation": ""
+      },
+      {
+        "question": "La confirmation du diagnostic de la maladie cœliaque :",
+        "options": [
+          "A. HLA à risque obligatoire.",
+          "B. Anticorps anti-transglutaminase de type IgA en absence de déficit dans les IgA.",
+          "C. Les anti-transglutaminase type IgG en cas de déficit en IgA.",
+          "D. L'atrophie villositaire totale ou subtotale en biopsie intestinale.",
+          "E. La clinique évocatrice est suffisante."
+        ],
+        "correct_option_ids": [1, 2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Peut ressembler histologiquement à une maladie cœliaque :",
+        "options": [
+          "A. Allergie au gluten.",
+          "B. Déficit immunitaire.",
+          "C. Carence martiale sévère.",
+          "D. Allergie aux protéines de lait de vache (APLV).",
+          "E. Une mucoviscidose."
+        ],
+        "correct_option_ids": [1, 2, 3, 4],
+        "explanation": ""
+      },
+      {
+        "question": "Parmi les sujets à risque de maladie cœliaque :",
+        "options": [
+          "A. Déficit immunitaire.",
+          "B. Trisomie 21.",
+          "C. Apparentés de 1er degré.",
+          "D. ATCD de prématurité.",
+          "E. MPE."
+        ],
+        "correct_option_ids": [0, 1, 2],
+        "explanation": ""
+      },
+      {
+        "question": "Le diagnostic de la maladie cœliaque doit être évoqué devant :",
+        "options": [
+          "A. Diarrhée en boue de vache.",
+          "B. Un syndrome de malabsorption initiale.",
+          "C. Un retard staturo-pondéral.",
+          "D. Diabète type 1.",
+          "E. Pneumopathies à répétition."
+        ],
+        "correct_option_ids": [1, 2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "L'allergie au gluten ou l'hypersensibilité au gluten se manifeste par :",
+        "options": [
+          "A. Symptômes de la maladie cœliaque + sérologies négatives + atrophie villositaire intestinale.",
+          "B. Symptômes de la maladie cœliaque + sérologies positives + atrophie villositaire intestinale.",
+          "C. Symptômes de la maladie cœliaque + sérologies négatives + absence d'atrophie villositaire intestinale.",
+          "D. Symptômes de la maladie cœliaque + sérologies négatives + pas d'atrophie villositaire intestinale."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Dans la maladie cœliaque :",
+        "options": [
+          "A. La forme potentielle associe des symptômes, anticorps positifs et une muqueuse normale.",
+          "B. Les anticorps anti-endomysium sont dépassés au diagnostic positif.",
+          "C. Un taux > 10 fois la normale des anticorps antitransglutaminase peut faire éviter le recours à la biopsie jéjunale pour le diagnostic positif.",
+          "D. Une absence de réponse clinique et/ou histologique à un régime sans gluten bien conduit doit faire rechercher un déficit immunitaire, ou une intolérance associée."
+        ],
+        "correct_option_ids": [1, 2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Le diagnostic de la maladie cœliaque :",
+        "options": [
+          "A. Repose sur la sérologie uniquement.",
+          "B. Implique toujours une diarrhée chronique.",
+          "C. Nécessite au moins une biopsie jéjunale.",
+          "D. Associe une diarrhée + vomissements."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "La maladie cœliaque :",
+        "options": [
+          "A. Est due à une allergie au gluten.",
+          "B. Liée à une anomalie de l'immunité cellulaire.",
+          "C. Survenant chez un sujet génétiquement prédisposé.",
+          "D. Toujours associée à d'autres maladies auto-immunes."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Une maladie cœliaque potentielle :",
+        "options": [
+          "A. Implique une clinique positive.",
+          "B. Implique une biopsie positive.",
+          "C. Implique génotype HLA positif pour DQ2 et DQ8 + biopsie intestinale normale.",
+          "D. Implique génotype HLA positif pour DR2 et DR4."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Dans la maladie cœliaque, la biopsie jéjunale retrouve :",
+        "options": [
+          "A. Une atrophie villositaire avec un rapport V/M très inférieur à 2.",
+          "B. Une hypocellularité franche du chorion.",
+          "C. Une augmentation du nombre de lymphocytes T dans l'épithélium.",
+          "D. Une hypoplasie des cryptes."
+        ],
+        "correct_option_ids": [0, 2],
+        "explanation": ""
+      },
+      {
+        "question": "Le syndrome cœliaque biologique :",
+        "options": [
+          "A. Anémie toujours microcytaire hypochrome.",
+          "B. Un TP bas corrigé par l'injection de la vitamine K.",
+          "C. Hypoprotidémie, Hypoalbuminémie.",
+          "D. Hypocalcémie."
+        ],
+        "correct_option_ids": [2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "En cas de malabsorption intestinale :",
+        "options": [
+          "A. La biopsie jéjunale est obligatoire.",
+          "B. Le test à la sueur peut être positif.",
+          "C. L'APLV peut être une cause de malabsorption.",
+          "D. Les explorations radiologiques (transit du grêle, lavement baryté) sont obligatoires."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Dans l'APLV :",
+        "options": [
+          "A. La biopsie intestinale montre des lésions non spécifiques avec une atrophie villositaire partielle.",
+          "B. L'atrophie villositaire peut être locale.",
+          "C. Les IgE spécifiques anti PLV sont toujours positifs.",
+          "D. Le régime d'éviction est un régime à vie."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "La maladie cœliaque :",
+        "options": [
+          "A. Est due à une hypersensibilité transitoire au gluten.",
+          "B. Liée à une anomalie de l'immunité cellulaire.",
+          "C. Survenant chez un sujet génétiquement prédisposé.",
+          "D. Se traduit par une atrophie villositaire partielle."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Une atrophie villositaire totale ou subtotale peut se voir au cours :",
+        "options": [
+          "A. Maladie cœliaque.",
+          "B. Déficit immunitaire.",
+          "C. Carence martiale sévère.",
+          "D. Une allergie aux protéines du lait de vache."
+        ],
+        "correct_option_ids": [0, 1, 2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Un syndrome de malabsorption comporte :",
+        "options": [
+          "A. Une anorexie, des troubles du caractère, une cassure de la courbe staturo-pondérale.",
+          "B. Des selles liquidiennes.",
+          "C. Une hypocalcémie.",
+          "D. Un TP bas non corrigé par l'injection de vitamine K."
+        ],
+        "correct_option_ids": [0, 2],
+        "explanation": ""
+      },
+      {
+        "question": "L'aspect des selles renseigne sur le mécanisme et l'organe en cause :",
+        "options": [
+          "A. Des selles pâles en boue de vache, ce sont des selles de malabsorption.",
+          "B. Des selles huileuses avec stéatorrhée importante c'est une maldigestion.",
+          "C. La présence de sang dans les selles peut se voir au cours des colites.",
+          "D. Un clinistix négatif est significatif d'une fermentation."
+        ],
+        "correct_option_ids": [0, 1, 2],
+        "explanation": ""
+      }
+    ],
+    "Arthrite juvénile idiopathique (AJI)": [
+      {
+        "question": "L'arthrite juvénile idiopathique (AJI) est définie par :",
+        "options": [
+          "A. Une affection inflammatoire articulaire.",
+          "B. Un âge de survenue inférieur à 16 ans.",
+          "C. Une évolution depuis au moins 2 semaines.",
+          "D. Toutes les réponses sont correctes."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "L'AJI dans sa forme oligoarticulaire est :",
+        "options": [
+          "A. La plus fréquente des AJI.",
+          "B. L'atteinte de moins de 5 articulations dans les 6 premiers mois d'évolution.",
+          "C. Redoutable pour l'atteinte oculaire surtout si FAN positifs.",
+          "D. Toutes les réponses sont justes."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "L'arthrite juvénile idiopathique (AJI) dans sa forme systémique, le traitement proposé en première intention est :",
+        "options": ["A. Aspirine.", "B. AINS.", "C. Corticoïdes.", "D. Immunosuppresseurs."],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Au cours de l'arthrite juvénile idiopathique (AJI) dans sa forme systémique, la fièvre est :",
+        "options": ["A. Tierce.", "B. Quarte.", "C. En plateau.", "D. Oscillante."],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Tous ces facteurs sont de mauvais pronostic pour l'AJI dans sa forme systémique, sauf un lequel ?",
+        "options": [
+          "A. Age < 6 ans.",
+          "B. Evolution > 5 ans.",
+          "C. IgA ↓.",
+          "D. Présence d'anomalies radiologiques."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "L'amylose rénale complique l'AJI dans sa forme :",
+        "options": [
+          "A. Systémique.",
+          "B. Polyarticulaire.",
+          "C. Oligoarticulaire.",
+          "D. Enthésite en rapport avec une arthrite."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Le seuil de positivité du Waaler Rose au cours de l'AJI :",
+        "options": ["A. 1/60.", "B. 1/64.", "C. 1/80.", "D. 1/84."],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "La dose de l'acide acétylsalicylique (Aspirine) dans l'AJI dans sa forme systémique est de :",
+        "options": [
+          "A. 10-11 mg/kg/j.",
+          "B. 60-80 mg/kg/j.",
+          "C. 100-110 mg/kg/j.",
+          "D. 1000-1100 mg/kg/j."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      }
+    ],
+    "Anémies hémolytiques": [
+      {
+        "question": "Tous les signes suivants sont en faveur d'une β-thalassémie, sauf un :",
+        "options": [
+          "A. Anémie normochrome normocytaire.",
+          "B. Anémie hypochrome microcytaire.",
+          "C. Hémolyse extravasculaire.",
+          "D. Hyper-ferritinémie."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Un garçon de 5 ans se présente à la consultation pour une pâleur intense, fièvre, émission d'urines rouges apparues brutalement. FNS retrouve Hb à 6g/dl. Ce tableau est évocateur de :",
+        "options": [
+          "A. Tableau d'hémolyse extravasculaire.",
+          "B. Tableau d'hémolyse intravasculaire.",
+          "C. Hémolyse par déficit en G6PD.",
+          "D. B et C sont exactes."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "L'anémie hémolytique auto-immune chronique est :",
+        "options": [
+          "A. Plus fréquente chez les adolescents.",
+          "B. Caractérisée par une hémolyse intravasculaire.",
+          "C. Précédée souvent par une infection virale.",
+          "D. Associée souvent à d'autres maladies auto-immunes."
+        ],
+        "correct_option_ids": [2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "L'anémie hémolytique aiguë est caractérisée par :",
+        "options": [
+          "A. Fréquence plus élevée chez les adolescents.",
+          "B. Hémolyse intravasculaire.",
+          "C. Hémolyse extravasculaire.",
+          "D. Est précédée souvent par une infection virale."
+        ],
+        "correct_option_ids": [1, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Sur la radiographie du crâne de face d'un garçon de 8 ans atteint de thalassémie majeure, on peut observer en rapport avec cette affection :",
+        "options": [
+          "A. Un épaississement de la voûte crânienne.",
+          "B. Une spéculation en poils de brosse de la voûte crânienne.",
+          "C. Une disposition des sutures de la voûte.",
+          "D. Une calcification de la faux du cerveau."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "La découverte d'une anémie hémolytique avec test de Coombs direct positif doit faire rechercher :",
+        "options": [
+          "A. Une leucémie lymphoïde chronique.",
+          "B. Un cancer de l'estomac.",
+          "C. Un lupus érythémateux disséminé.",
+          "D. Une prise médicamenteuse."
+        ],
+        "correct_option_ids": [2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Parmi les signes suivants, lesquels sont compatibles avec le diagnostic de β-thalassémie mineure :",
+        "options": [
+          "A. Anémie modérée.",
+          "B. Diminution de la résistance globulaire à l'hypotonie.",
+          "C. Hyposidérémie franche.",
+          "D. Une augmentation de l'Hb A2 à l'électrophorèse."
+        ],
+        "correct_option_ids": [0, 3],
+        "explanation": ""
+      }
+    ],
+    "Anémies par carence martiale": [
+      {
+        "question": "Une des propositions suivantes n'est pas une étiologie d'anémie microcytaire, laquelle ?",
+        "options": [
+          "A. Intoxication au plomb.",
+          "B. Inflammation.",
+          "C. Carence en fer.",
+          "D. Drépanocytose."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Une anémie par carence martiale peut survenir dans toutes les situations suivantes sauf une, laquelle ?",
+        "options": [
+          "A. Une prise excessive de lait de vache chez le nourrisson.",
+          "B. Un clampage retardé du cordon chez le nouveau-né.",
+          "C. Une parasitose intestinale massive.",
+          "D. Une carence d'apport en fer."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Dans la carence martiale, l'anémie est :",
+        "options": [
+          "A. Hypochrome microcytaire.",
+          "B. Régénérative.",
+          "C. Microcytaire.",
+          "D. RDW est diminué."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Une anémie d'origine inflammatoire est :",
+        "options": [
+          "A. Normochrome normocytaire.",
+          "B. Normochrome macrocytaire.",
+          "C. Hypochrome microcytaire.",
+          "D. Hyposidérémique."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "La carence martiale chez l'enfant est :",
+        "options": [
+          "A. De loin l'étiologie la plus fréquente d'anémie.",
+          "B. L'anémie est microcytaire arégénérative.",
+          "C. Le fer est un oligoélément essentiel pour la production des GR.",
+          "D. La transferrine est basse."
+        ],
+        "correct_option_ids": [0, 1, 2],
+        "explanation": ""
+      },
+      {
+        "question": "Chez un enfant de 3 ans, anémie avec Hb à 8g/dl, microcytaire arégénérative. Quelle hypothèse diagnostique évoquez-vous en premier ?",
+        "options": [
+          "A. Carence en vitamine B12.",
+          "B. Carence en folates.",
+          "C. Carence martiale.",
+          "D. Anémie inflammatoire."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Dans la carence martiale on retrouve :",
+        "options": [
+          "A. Une hypochromie avec microcytose.",
+          "B. Une anémie arégénérative.",
+          "C. Un coefficient de saturation élevé.",
+          "D. Une ferritinémie effondrée."
+        ],
+        "correct_option_ids": [0, 1, 3],
+        "explanation": ""
+      },
+      {
+        "question": "La carence martiale chez l'enfant est :",
+        "options": [
+          "A. Due à un défaut d'apport en fer chez le nourrisson de moins de 3 mois.",
+          "B. Est une cause rare d'anémie chez l'enfant.",
+          "C. L'anémie microcytaire hypochrome.",
+          "D. La ferritinémie est basse."
+        ],
+        "correct_option_ids": [2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Le fer est absorbé essentiellement au niveau :",
+        "options": ["A. De l'estomac.", "B. Du duodénum.", "C. Du jéjunum.", "D. De l'iléon."],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "En présence d'une carence martiale, on peut avoir :",
+        "options": [
+          "A. Anémie microcytaire hypochrome.",
+          "B. Sidérémie basse.",
+          "C. Coefficient de saturation de la transferrine diminué.",
+          "D. Ferritinémie augmentée."
+        ],
+        "correct_option_ids": [0, 1, 2],
+        "explanation": ""
+      },
+      {
+        "question": "Une anémie par carence martiale est retrouvée :",
+        "options": [
+          "A. Chez un nourrisson allaité au sein non supplémenté en fer après 6 mois.",
+          "B. Chez l'enfant nourri exclusivement au lait de vache.",
+          "C. Chez l'enfant recevant un lait artificiel enrichi en fer.",
+          "D. Chez un enfant dont le clampage du cordon a été retardé à la naissance."
+        ],
+        "correct_option_ids": [0, 1],
+        "explanation": ""
+      },
+      {
+        "question": "L'anémie de Biermer chez l'enfant :",
+        "options": [
+          "A. Est favorisée par la carence en vitamine B12.",
+          "B. Peut s'observer au cours de la maladie cœliaque.",
+          "C. Est une anémie macrocytaire.",
+          "D. Régénérative."
+        ],
+        "correct_option_ids": [0, 1, 2],
+        "explanation": ""
+      },
+      {
+        "question": "Dans quelle ou quelles circonstance(s) peut-on observer une macrocytose :",
+        "options": [
+          "A. Carence en folates.",
+          "B. Maladie de Biermer.",
+          "C. Maladie cœliaque.",
+          "D. Anémie inflammatoire."
+        ],
+        "correct_option_ids": [0, 1, 2],
+        "explanation": ""
+      },
+      {
+        "question": "Dans l'anémie par carence martiale on retrouve :",
+        "options": [
+          "A. Sidérémie basse avec coefficient de saturation élevé.",
+          "B. Sidérémie basse avec capacité totale de saturation diminuée.",
+          "C. Ferritinémie basse et transferrine diminuée.",
+          "D. Transferrine élevée avec capacité totale de saturation augmentée."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Les réserves en fer chez un nouveau-né normal suffisent pour une durée de :",
+        "options": ["A. 1 mois.", "B. 2 mois.", "C. 4 mois.", "D. 6 mois."],
+        "correct_option_ids": [2],
+        "explanation": ""
+      }
+    ],
+    "Rachitisme carentiel": [
+      {
+        "question": "Le rachitisme carentiel est :",
+        "options": [
+          "A. Une endocrinopathie.",
+          "B. Une maladie constitutionnelle.",
+          "C. Liée à une anomalie quantitative de la vitamine D.",
+          "D. Les signes précèdent les autres anomalies radiologiques et biologiques.",
+          "E. Les PAL sont toujours élevés."
+        ],
+        "correct_option_ids": [2, 4],
+        "explanation": ""
+      },
+      {
+        "question": "Parmi les éléments caractéristiques du rachitisme carentiel on observe :",
+        "options": [
+          "A. Chapelet costal et nouures.",
+          "B. DPM doit être strictement normal.",
+          "C. PAL avec taux variables.",
+          "D. Toujours une hypocalcémie.",
+          "E. Signes métaphysaires constants."
+        ],
+        "correct_option_ids": [0, 2, 4],
+        "explanation": ""
+      },
+      {
+        "question": "Le rachitisme carentiel est :",
+        "options": [
+          "A. Une endocrinopathie.",
+          "B. Une maladie carentielle.",
+          "C. Liée à une anomalie qualitative de la vitamine D.",
+          "D. Les signes cliniques sont au premier plan.",
+          "E. Le dosage des PAL oriente le diagnostic."
+        ],
+        "correct_option_ids": [1, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Le rachitisme avec manifestations de l'hypocalcémie :",
+        "options": [
+          "A. Forme clinique fréquente.",
+          "B. Touche notamment le nourrisson âgé de 06 à 18 mois.",
+          "C. Les signes radiologiques sont inconstants.",
+          "D. Son traitement repose sur la calcithérapie per os + vitaminothérapie."
+        ],
+        "correct_option_ids": [1, 2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Les signes métaphysaires du rachitisme :",
+        "options": [
+          "A. Diminution de la densité osseuse.",
+          "B. Aspect élargi en toit de pagode au niveau des extrémités des os longs.",
+          "C. Retard d'apparition des points d'ossification.",
+          "D. Pseudo-fractures de Loozer-Milkman."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Chez un enfant carencé en vitamine D, l'un des troubles suivants ne peut pas être attribué à cette carence, lequel ?",
+        "options": [
+          "A. Spasme du sanglot.",
+          "B. Hypotonie.",
+          "C. Retard de fermeture des fontanelles.",
+          "D. Nouures épiphysaires."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Le rachitisme carentiel peut évoluer chez le nourrisson vers la ou les complication(s) suivantes ?",
+        "options": [
+          "A. Une anémie normochrome.",
+          "B. Des bronchopneumopathies à répétition.",
+          "C. Des déformations osseuses.",
+          "D. Une hépatosplénomégalie avec myélémie."
+        ],
+        "correct_option_ids": [1, 2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Parmi les propositions suivantes, quelles sont celles qui font partie de la physiopathologie du rachitisme carentiel ?",
+        "options": [
+          "A. Défaut d'absorption intestinale du calcium.",
+          "B. Fuite urinaire du calcium.",
+          "C. Insuffisance de synthèse cutanée de la vitamine D.",
+          "D. Hyperparathyroïdie secondaire."
+        ],
+        "correct_option_ids": [0, 2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Pour la classification de Frazer :",
+        "options": [
+          "A. Au stade I on trouve une hypocalcémie avec une phosphorémie normale.",
+          "B. Au stade II la calcémie est normale avec PTH élevée.",
+          "C. Au stade III la calcémie et la phosphémie sont effondrées.",
+          "D. Toutes les propositions sont justes."
+        ],
+        "correct_option_ids": [0, 1, 3],
+        "explanation": ""
+      },
+      {
+        "question": "La vitamine D3 assure toutes ces fonctions sauf une, laquelle ?",
+        "options": [
+          "A. Augmentation de l'absorption intestinale du calcium.",
+          "B. Augmentation de la résorption ostéoclastique de l'os ancien.",
+          "C. Diminution de l'absorption intestinale du phosphore.",
+          "D. Augmentation de la minéralisation osseuse."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Le rachitisme carentiel est favorisé par :",
+        "options": [
+          "A. L'exposition fréquente au soleil.",
+          "B. Une peau très claire.",
+          "C. Supplémentation insuffisante en vit D3.",
+          "D. Les infections à répétition."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Toutes les perturbations biologiques suivantes peuvent se voir en cas de rachitisme carentiel sauf une, laquelle ?",
+        "options": [
+          "A. Calcémie normale, phosphatase alcaline élevée, PTH élevée.",
+          "B. Calcémie normale, phosphatase alcaline élevée, PTH normale.",
+          "C. Calcémie basse, phosphatase alcaline élevée, PTH normale.",
+          "D. Calcémie basse, phosphatase alcaline élevée, PTH élevée."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Le rachitisme avec manifestations de l'hypocalcémie :",
+        "options": [
+          "A. Forme clinique rare.",
+          "B. Touche notamment le nourrisson âgé de 06 à 18 mois.",
+          "C. Les signes radiologiques sont très prononcés.",
+          "D. Son traitement repose sur la calcithérapie per os + vitaminothérapie."
+        ],
+        "correct_option_ids": [0, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Le rachitisme carentiel évolutif non traité du jeune nourrisson se manifeste sur une radio du poignet par :",
+        "options": [
+          "A. Un élargissement transversal de la métaphyse.",
+          "B. Une incurvation en cupule de la ligne métaphysaire.",
+          "C. Des images en toit de pagode.",
+          "D. Un aspect condensé de la ligne métaphysaire."
+        ],
+        "correct_option_ids": [0, 1, 2],
+        "explanation": ""
+      },
+      {
+        "question": "Le rachitisme carentiel chez un nourrisson de 08 mois peut s'exprimer par tous les signes suivants sauf un lequel :",
+        "options": [
+          "A. Craniotabès.",
+          "B. Hypotonie musculaire.",
+          "C. Chapelet costal.",
+          "D. Nouures épiphysaires."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Parmi les propositions suivantes quelles sont celles qui font partie de la physiopathologie du rachitisme carentiel :",
+        "options": [
+          "A. Défaut d'absorption intestinale du calcium.",
+          "B. Fuite urinaire du calcium.",
+          "C. Insuffisance de synthèse cutanée de la Vit D.",
+          "D. Hyperparathyroïdie secondaire."
+        ],
+        "correct_option_ids": [0, 2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Dans le rachitisme carentiel, les données suivantes sont toutes justes sauf une, laquelle ?",
+        "options": [
+          "A. Troubles de minéralisation osseuse par carence en vit D.",
+          "B. En période de croissance rapide de l'os.",
+          "C. Sa prévention est indispensable.",
+          "D. Son dépistage se fait par un bilan phosphocalcique systématique."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Dans le rachitisme carentiel, le stade II de Frazer comporte :",
+        "options": [
+          "A. Hypocalcémie et hypophosphorémie.",
+          "B. Calcémie normale, hypocalciurie et hypophosphorémie.",
+          "C. Des signes cliniques et radiologiques discrets.",
+          "D. Calcémie abaissée, phosphorémie normale."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "La prophylaxie du rachitisme se fait par une supplémentation systématique en vitamine D :",
+        "options": [
+          "A. Chez le nourrisson avec une dose de charge de 200.000 UI tous les 6 mois.",
+          "B. Chez le nourrisson avec une dose de charge de 200.000 UI tous les 2 mois.",
+          "C. Chez le nourrisson avec une dose de charge de 100.000 UI tous les 6 mois.",
+          "D. Chez le nourrisson avec une dose de charge de 100.000 UI tous les 2 mois."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "La supplémentation en vit D3 en Algérie est systématique à l'âge de :",
+        "options": ["A. 1 + 3 mois.", "B. 2 + 5 mois.", "C. 1 + 6 mois.", "D. 1 + 6 + 9 mois."],
+        "correct_option_ids": [3],
+        "explanation": ""
+      }
+    ],
+    "Hypothyroïdie": [
+      {
+        "question": "L'hypothyroïdie peut se manifester par tous les signes suivants sauf un, lequel ?",
+        "options": [
+          "A. Ictère néo-natal prolongé.",
+          "B. Retard de développement psychomoteur.",
+          "C. Retard d'émission du méconium.",
+          "D. Retard pondéral isolé."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "L'hypothyroïdie centrale est caractérisée par :",
+        "options": [
+          "A. FT4 basse et TSH élevée.",
+          "B. FT4 basse et TSH basse.",
+          "C. FT4 basse et TSH normale.",
+          "D. FT4 normale et TSH basse."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Pour l'hypothyroïdie congénitale toutes les propositions suivantes sont justes sauf une, laquelle ?",
+        "options": [
+          "A. Un goitre avec hypothyroïdie primaire est évocateur d'un trouble de l'hormonosynthèse.",
+          "B. L'athétose donne la forme la plus grave.",
+          "C. L'âge osseux < l'âge statural < l'âge chronologique.",
+          "D. L'âge statural < l'âge osseux < l'âge chronologique."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Quels signes sont évocateurs d'une hypothyroïdie congénitale :",
+        "options": [
+          "A. Ictère prolongé chez le nouveau-né.",
+          "B. Absence de points de Beclard à la radio des genoux chez le nouveau-né.",
+          "C. Troubles du sommeil avec des cris incessants.",
+          "D. TSH élevée, FT4, FT3 basses."
+        ],
+        "correct_option_ids": [0, 1, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Amine âgée de 4 ans présente un retard de croissance staturale. Le bilan biologique a mis en évidence une TSH élevée et FT4 basse et l'échographie cervicale n'a pas visualisé la glande thyroïde. Quels sont les diagnostics les plus probables ?",
+        "options": [
+          "A. Troubles de l'hormonosynthèse.",
+          "B. Ectopie thyroïdienne.",
+          "C. Agénésie thyroïdienne.",
+          "D. Hypothyroïdie centrale."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "La gravité de l'hypothyroïdie réside dans :",
+        "options": [
+          "A. Le retard de croissance staturale.",
+          "B. Le retard mental.",
+          "C. Les perturbations métaboliques.",
+          "D. L'ictère prolongé."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Parmi les facteurs suivants quels sont qui peuvent influencer la dose de DL-thyroxine en cas d'hypothyroïdie ?",
+        "options": [
+          "A. L'âge de l'enfant.",
+          "B. La cause de l'hypothyroïdie.",
+          "C. La sévérité de l'hypothyroïdie.",
+          "D. L'aspect échographique de la thyroïde."
+        ],
+        "correct_option_ids": [0, 1],
+        "explanation": ""
+      },
+      {
+        "question": "Le bilan radiologique chez un enfant en hypothyroïdie peut mettre en évidence toutes les anomalies suivantes sauf une, laquelle ?",
+        "options": [
+          "A. Absence des points de Beclard à la naissance.",
+          "B. Aspect normal des points de Beclard.",
+          "C. Age osseux = âge statural < âge chronologique.",
+          "D. Densification exagérée de la base du crâne."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "En cas d'hypothyroïdie congénitale avec loge thyroïdienne vide à l'échographie, quel est l'examen complémentaire qu'on doit demander ?",
+        "options": [
+          "A. Scintigraphie thyroïdienne.",
+          "B. Ac anti-thyroperoxydase.",
+          "C. IRM cérébrale.",
+          "D. Ac antithyroglobuline."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Tous les signes suivants de l'hypothyroïdie sont réversibles sauf un, lequel ?",
+        "options": [
+          "A. Retard de la croissance staturale.",
+          "B. Retard mental.",
+          "C. Myxoedème.",
+          "D. Ictère."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      }
+    ],
+    "Diabète et ses complications": [
+      {
+        "question": "Le diabète de l'enfant :",
+        "options": [
+          "A. Survient chez des enfants prédisposés génétiquement.",
+          "B. Est toujours un diabète monogénique.",
+          "C. S'exprime avec une intolérance au glucose qui répond aux mesures diététiques.",
+          "D. Son diagnostic de certitude nécessite la présence d'auto-Ac spécifiques positifs."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Le diagnostic du diabète chez l'enfant est défini par :",
+        "options": [
+          "A. Une glycémie à jeun > 1.20 g/l.",
+          "B. Nécessite au moins deux glycémies post-prandiales supérieures à 2g/l.",
+          "C. Est retenu en association d'une hyperglycémie à une glycosurie + cétonurie.",
+          "D. La présence de la cétonurie est un critère obligatoire pour retenir le diagnostic."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Pour l'insulinothérapie chez l'enfant diabétique de Type I :",
+        "options": [
+          "A. Le meilleur schéma est le basal-bolus.",
+          "B. Dans le schéma de deux injections par jour on utilise les analogues de l'insuline.",
+          "C. Les analogues d'insuline sont indiqués chez le nourrisson diabétique.",
+          "D. Les besoins quotidiens en insuline sont de l'ordre de 0.8 à 1 UI/kg/jour."
+        ],
+        "correct_option_ids": [0, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Dans la prise en charge de l'acidocétose diabétique :",
+        "options": [
+          "A. La perfusion de 5cc/kg de SB 1.4% en 30 mn est systématique.",
+          "B. La supplémentation en potassium n'est pas systématique.",
+          "C. La normalisation de la glycémie doit être précoce dans les 4 premières heures.",
+          "D. L'insuline est donnée en perfusion IV."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Tous les signes suivants peuvent être présents en cas d'acidocétose sauf un, lequel ?",
+        "options": [
+          "A. Déshydratation globale.",
+          "B. Dyspnée inspiratoire.",
+          "C. Troubles de la conscience.",
+          "D. Vomissements."
+        ],
+        "correct_option_ids": [1],
+        "explanation": ""
+      },
+      {
+        "question": "Durant le traitement de l'acidocétose diabétique, toutes les complications suivantes peuvent se voir sauf une, laquelle ?",
+        "options": [
+          "A. Un œdème cérébral.",
+          "B. Une hypoglycémie.",
+          "C. Une hyperkaliémie.",
+          "D. Une hypokaliémie."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      },
+      {
+        "question": "Durant la décompensation céto-acidosique, le désordre acido-basique est de type :",
+        "options": [
+          "A. Alcalose gazeuse.",
+          "B. Acidose gazeuse.",
+          "C. Alcalose métabolique.",
+          "D. Acidose métabolique."
+        ],
+        "correct_option_ids": [3],
+        "explanation": ""
+      },
+      {
+        "question": "Devant une hypoglycémie chez un enfant diabétique, quel est le 1er geste à faire :",
+        "options": [
+          "A. Administration d'un sucre rapide puis un sucre lent.",
+          "B. Arrêt de toute activité physique.",
+          "C. Glucagon en IM.",
+          "D. Perfusion du sérum glucosé hypertonique."
+        ],
+        "correct_option_ids": [0],
+        "explanation": ""
+      },
+      {
+        "question": "Devant un diabète inaugural, quels sont les examens biologiques qu'on doit demander ?",
+        "options": [
+          "A. Glycémie veineuse.",
+          "B. Ionogramme sanguin.",
+          "C. Peptide C.",
+          "D. Ac anti-GAD, anti-IA2."
+        ],
+        "correct_option_ids": [0, 1, 2, 3],
+        "explanation": ""
+      },
+      {
+        "question": "Dans le traitement de l'acidocétose diabétique :",
+        "options": [
+          "A. L'administration de l'insuline au-delà des 02 premières heures.",
+          "B. La perfusion du sérum bicarbonaté est obligatoire.",
+          "C. La supplémentation en potassium est importante.",
+          "D. La réhydratation peut se faire avec le sérum glucosé isotonique ou hypertonique."
+        ],
+        "correct_option_ids": [2],
+        "explanation": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="qcm_navy">#00162E</color>
+    <color name="qcm_navy_light">#0A2540</color>
+    <color name="qcm_green">#2ECC71</color>
+    <color name="qcm_green_dark">#219150</color>
+    <color name="qcm_bg">#F5F5F7</color>
+    <color name="qcm_card">#FFFFFF</color>
+    <color name="qcm_text_secondary">#6B7280</color>
+</resources>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/qcm_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header banner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/qcm_navy"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✅ QCM Overlay"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="#B8C4D0"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Card: permission -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="@color/qcm_card"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🔐 الصلاحيات"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/qcm_navy_light"
+                        android:layout_marginBottom="10dp" />
+
+                    <Button
+                        android:id="@+id/btnPermission"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cornerRadius="12dp"
+                        android:text="@string/grant_overlay_permission" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card: module/lesson selection -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="@color/qcm_card"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="📚 المواد والدروس"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/qcm_navy_light" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="اختر ما تريد التركيز عليه وحدّد تاريخ الامتحان — بدون اختيار = الكل"
+                        android:textSize="12sp"
+                        android:textColor="@color/qcm_text_secondary"
+                        android:layout_marginBottom="4dp" />
+
+                    <LinearLayout
+                        android:id="@+id/modulesContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card: intensity -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="@color/qcm_card"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="⏱️ وتيرة الظهور الافتراضية"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/qcm_navy_light" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="تُستخدم فقط للمواد بدون تاريخ امتحان محدد"
+                        android:textSize="12sp"
+                        android:textColor="@color/qcm_text_secondary"
+                        android:layout_marginBottom="6dp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioIntensity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/radioHigh"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="🔥 قريب من الامتحان (كل 20-60 دقيقة)" />
+
+                        <RadioButton
+                            android:id="@+id/radioMedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="⚖️ عادي (كل 2-5 ساعات)" />
+
+                        <RadioButton
+                            android:id="@+id/radioLow"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="🌙 بعيد (كل 6-10 ساعات)" />
+                    </RadioGroup>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Card: controls -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="@color/qcm_card"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <Button
+                        android:id="@+id/btnToggleService"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginBottom="10dp"
+                        app:backgroundTint="@color/qcm_green"
+                        app:cornerRadius="14dp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:text="@string/start_service" />
+
+                    <Button
+                        android:id="@+id/btnTestNow"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cornerRadius="14dp"
+                        app:strokeColor="@color/qcm_navy"
+                        android:textColor="@color/qcm_navy"
+                        android:text="@string/test_now" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
