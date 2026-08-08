@@ -105,6 +105,7 @@ class OverlayService : Service() {
             val cb = CheckBox(this)
             cb.text = "${('A' + i)}. $optionText"
             cb.setTextColor(Color.BLACK)
+            cb.buttonDrawable = null
             cb.layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f)
 
             val butterfly = TextView(this)

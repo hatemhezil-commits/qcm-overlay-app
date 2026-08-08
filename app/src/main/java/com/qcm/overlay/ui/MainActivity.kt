@@ -176,10 +176,16 @@ class MainActivity : AppCompatActivity() {
                 cb.setPadding(32, 0, 0, 0)
                 lessonCheckBoxes[key] = cb
 
-                val trainBtn = Button(this)
-                trainBtn.text = "🎯 S'entraîner"
-                trainBtn.textSize = 11f
-                trainBtn.setPadding(8, 2, 8, 2)
+                val trainBtn = TextView(this)
+                trainBtn.text = "➜"
+                trainBtn.textSize = 16f
+                trainBtn.setTextColor(Color.WHITE)
+                trainBtn.gravity = Gravity.CENTER
+                trainBtn.background = androidx.core.content.ContextCompat.getDrawable(this, com.qcm.overlay.R.drawable.bg_circle_pink)
+                val size = (36 * resources.displayMetrics.density).toInt()
+                val trainBtnParams = LinearLayout.LayoutParams(size, size)
+                trainBtnParams.marginStart = (8 * resources.displayMetrics.density).toInt()
+                trainBtn.layoutParams = trainBtnParams
                 trainBtn.setOnClickListener {
                     com.qcm.overlay.ui.QuizActivity.start(this, module, lesson)
                 }
