@@ -60,7 +60,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="🔐 الصلاحيات"
+                        android:text="🔐 Autorisations"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/qcm_navy_light"
@@ -76,7 +76,7 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Card: module/lesson selection -->
+            <!-- Card: module/lesson selection (accordion) -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="📚 المواد والدروس"
+                        android:text="📚 Matières et leçons"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/qcm_navy_light" />
@@ -102,7 +102,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="اختر ما تريد التركيز عليه وحدّد تاريخ الامتحان — بدون اختيار = الكل"
+                        android:text="Touchez une matière pour la déplier. Rien coché = tout inclus."
                         android:textSize="12sp"
                         android:textColor="@color/qcm_text_secondary"
                         android:layout_marginBottom="4dp" />
@@ -133,7 +133,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="⏱️ وتيرة الظهور الافتراضية"
+                        android:text="⏱️ Fréquence par défaut"
                         android:textStyle="bold"
                         android:textSize="16sp"
                         android:textColor="@color/qcm_navy_light" />
@@ -141,7 +141,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="تُستخدم فقط للمواد بدون تاريخ امتحان محدد"
+                        android:text="Utilisée seulement pour les matières sans date d'examen définie"
                         android:textSize="12sp"
                         android:textColor="@color/qcm_text_secondary"
                         android:layout_marginBottom="6dp" />
@@ -155,19 +155,19 @@
                             android:id="@+id/radioHigh"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="🔥 قريب من الامتحان (كل 20-60 دقيقة)" />
+                            android:text="🔥 Proche de l'examen (20-60 min)" />
 
                         <RadioButton
                             android:id="@+id/radioMedium"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="⚖️ عادي (كل 2-5 ساعات)" />
+                            android:text="⚖️ Normal (2-5 heures)" />
 
                         <RadioButton
                             android:id="@+id/radioLow"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="🌙 بعيد (كل 6-10 ساعات)" />
+                            android:text="🌙 Éloigné (6-10 heures)" />
                     </RadioGroup>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>

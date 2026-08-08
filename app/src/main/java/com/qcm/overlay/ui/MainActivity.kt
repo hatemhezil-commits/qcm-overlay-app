@@ -35,8 +35,12 @@ class MainActivity : AppCompatActivity() {
     private val lessonCheckBoxes = mutableMapOf<String, CheckBox>()
     // module -> the TextView showing its exam date / countdown
     private val examDateLabels = mutableMapOf<String, TextView>()
+    // module -> its collapsible lessons container (for the accordion behaviour)
+    private val moduleBodies = mutableMapOf<String, LinearLayout>()
+    // module -> its header arrow indicator
+    private val moduleArrows = mutableMapOf<String, TextView>()
 
-    private val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+    private val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -89,8 +93,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Builds, per module: a bold header, an exam-date row (set/clear date +
-     * countdown label), then one indented checkbox per lesson in that module.
+     * Builds one collapsible ("accordion") section per module: a header row
+     * (name + arrow) that toggles a body containing the exam-date row and
+     * one checkbox per lesson. Collapsed by default to keep the screen tidy
+     * when there are many modules/lessons.
      */
     private fun buildLessonsList() {
         val moduleLessonMap = QuestionRepository(applicationContext).getModuleLessonMap()
@@ -98,38 +104,65 @@ class MainActivity : AppCompatActivity() {
         binding.modulesContainer.removeAllViews()
         lessonCheckBoxes.clear()
         examDateLabels.clear()
+        moduleBodies.clear()
+        moduleArrows.clear()
 
         for ((module, lessons) in moduleLessonMap) {
-            val header = TextView(this)
-            header.text = module
-            header.setTextColor(Color.parseColor("#0A2540"))
-            header.setTypeface(null, Typeface.BOLD)
-            header.textSize = 15f
-            header.setPadding(0, 20, 0, 2)
-            binding.modulesContainer.addView(header)
 
-            // --- exam date row ---
-            val row = LinearLayout(this)
-            row.orientation = LinearLayout.HORIZONTAL
-            row.gravity = Gravity.CENTER_VERTICAL
+            // --- header (tap to expand/collapse) ---
+            val headerRow = LinearLayout(this)
+            headerRow.orientation = LinearLayout.HORIZONTAL
+            headerRow.gravity = Gravity.CENTER_VERTICAL
+            headerRow.setPadding(0, 20, 0, 12)
+
+            val arrow = TextView(this)
+            arrow.text = "▶"
+            arrow.textSize = 14f
+            arrow.setTextColor(Color.parseColor("#0A2540"))
+            arrow.setPadding(0, 0, 12, 0)
+            moduleArrows[module] = arrow
+
+            val title = TextView(this)
+            title.text = module
+            title.setTextColor(Color.parseColor("#0A2540"))
+            title.setTypeface(null, Typeface.BOLD)
+            title.textSize = 15f
+
+            headerRow.addView(arrow)
+            headerRow.addView(title)
+            binding.modulesContainer.addView(headerRow)
+
+            // --- collapsible body ---
+            val body = LinearLayout(this)
+            body.orientation = LinearLayout.VERTICAL
+            body.visibility = View.GONE
+            moduleBodies[module] = body
+            binding.modulesContainer.addView(body)
+
+            headerRow.setOnClickListener { toggleModule(module) }
+
+            // exam date row
+            val examRow = LinearLayout(this)
+            examRow.orientation = LinearLayout.HORIZONTAL
+            examRow.gravity = Gravity.CENTER_VERTICAL
 
             val dateBtn = Button(this)
-            dateBtn.text = "📅 تاريخ الامتحان"
+            dateBtn.text = "📅 Date d'examen"
             dateBtn.textSize = 12f
             dateBtn.setPadding(12, 4, 12, 4)
             dateBtn.setOnClickListener { showDatePicker(module) }
-            row.addView(dateBtn)
+            examRow.addView(dateBtn)
 
             val label = TextView(this)
             label.textSize = 12f
             label.setPadding(12, 0, 0, 0)
-            label.setTextColor(Color.parseColor("#2E7D32"))
             examDateLabels[module] = label
-            row.addView(label)
+            examRow.addView(label)
 
-            binding.modulesContainer.addView(row)
+            body.addView(examRow)
             updateExamLabel(module)
 
+            // lessons
             for (lesson in lessons) {
                 val key = "$module||$lesson"
 
@@ -144,7 +177,7 @@ class MainActivity : AppCompatActivity() {
                 lessonCheckBoxes[key] = cb
 
                 val trainBtn = Button(this)
-                trainBtn.text = "🎯 تدريب"
+                trainBtn.text = "🎯 S'entraîner"
                 trainBtn.textSize = 11f
                 trainBtn.setPadding(8, 2, 8, 2)
                 trainBtn.setOnClickListener {
@@ -153,9 +186,17 @@ class MainActivity : AppCompatActivity() {
 
                 lessonRow.addView(cb, LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f))
                 lessonRow.addView(trainBtn)
-                binding.modulesContainer.addView(lessonRow)
+                body.addView(lessonRow)
             }
         }
+    }
+
+    private fun toggleModule(module: String) {
+        val body = moduleBodies[module] ?: return
+        val arrow = moduleArrows[module] ?: return
+        val expanded = body.visibility == View.VISIBLE
+        body.visibility = if (expanded) View.GONE else View.VISIBLE
+        arrow.text = if (expanded) "▶" else "▼"
     }
 
     private fun showDatePicker(module: String) {
@@ -181,15 +222,15 @@ class MainActivity : AppCompatActivity() {
         val label = examDateLabels[module] ?: return
         val examDate = settings.getExamDate(module)
         if (examDate == null) {
-            label.text = "غير محدد"
+            label.text = "Non définie"
             label.setTextColor(Color.parseColor("#999999"))
             return
         }
         val daysLeft = TimeUnit.MILLISECONDS.toDays(examDate - System.currentTimeMillis())
         label.text = when {
-            daysLeft < 0 -> "${dateFormat.format(examDate)} (انتهى)"
-            daysLeft == 0L -> "${dateFormat.format(examDate)} (اليوم!)"
-            else -> "${dateFormat.format(examDate)} (باقي $daysLeft يوم)"
+            daysLeft < 0 -> "${dateFormat.format(examDate)} (passée)"
+            daysLeft == 0L -> "${dateFormat.format(examDate)} (aujourd'hui !)"
+            else -> "${dateFormat.format(examDate)} (J-$daysLeft)"
         }
         label.setTextColor(
             when {
@@ -244,8 +285,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.tvStatus.text = when {
             !granted -> getString(R.string.permission_needed)
-            isRunning -> "التذكير يعمل ✅ — ${effectiveIntensity.label}"
-            else -> "التذكير متوقف"
+            isRunning -> "Rappels actifs ✅ — ${effectiveIntensity.label}"
+            else -> "Rappels arrêtés"
         }
         binding.btnPermission.visibility = if (granted) View.GONE else View.VISIBLE
         binding.btnToggleService.text = getString(if (isRunning) R.string.stop_service else R.string.start_service)

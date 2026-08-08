@@ -3,9 +3,9 @@ package com.qcm.overlay.data
 import android.content.Context
 
 enum class Intensity(val label: String, val minHours: Long, val maxHours: Long) {
-    HIGH("قريب من الامتحان (مكثف)", 0, 1),      // every 0-60 min
-    MEDIUM("عادي", 2, 5),                        // every 2-5h
-    LOW("بعيد (خفيف)", 6, 10);                   // every 6-10h
+    HIGH("Proche de l'examen (intensif)", 0, 1),   // every 0-60 min
+    MEDIUM("Normal", 2, 5),                         // every 2-5h
+    LOW("Éloigné (léger)", 6, 10);                  // every 6-10h
 
     companion object {
         fun fromName(name: String?): Intensity =

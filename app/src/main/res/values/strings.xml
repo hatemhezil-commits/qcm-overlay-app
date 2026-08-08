@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">QCM Overlay</string>
-    <string name="validate">تصحيح</string>
-    <string name="grant_overlay_permission">منح صلاحية الظهور فوق التطبيقات</string>
-    <string name="start_service">تشغيل التذكير اليومي</string>
-    <string name="stop_service">إيقاف التذكير</string>
-    <string name="permission_needed">التطبيق يحتاج صلاحية \"الظهور فوق التطبيقات الأخرى\" ليعمل</string>
-    <string name="test_now">اختبار الآن (عرض سؤال فورًا)</string>
+    <string name="validate">Valider</string>
+    <string name="grant_overlay_permission">Autoriser l\'affichage par-dessus les applications</string>
+    <string name="start_service">Démarrer les rappels</string>
+    <string name="stop_service">Arrêter les rappels</string>
+    <string name="permission_needed">L\'application a besoin de l\'autorisation "Affichage par-dessus les autres applications" pour fonctionner</string>
+    <string name="test_now">Tester maintenant (afficher une question)</string>
 </resources>

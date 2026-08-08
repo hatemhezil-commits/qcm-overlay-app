@@ -96,7 +96,7 @@
             app:cornerRadius="14dp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:text="تصحيح" />
+            android:text="Valider" />
 
         <Button
             android:id="@+id/btnNext"
@@ -109,7 +109,7 @@
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:visibility="gone"
-            android:text="السؤال التالي ⟵" />
+            android:text="Question suivante ⟶" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

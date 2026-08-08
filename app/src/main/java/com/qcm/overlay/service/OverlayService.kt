@@ -13,8 +13,6 @@ import android.view.WindowManager
 import android.widget.CheckBox
 import android.widget.ImageButton
 import android.widget.LinearLayout
-import android.widget.RadioButton
-import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.core.app.NotificationCompat
 import com.qcm.overlay.R
@@ -52,14 +50,14 @@ class OverlayService : Service() {
 
     private fun startAsForeground() {
         val channel = NotificationChannel(
-            CHANNEL_ID, "QCM Reminders", NotificationManager.IMPORTANCE_MIN
+            CHANNEL_ID, "Rappels QCM", NotificationManager.IMPORTANCE_MIN
         )
         (getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager)
             .createNotificationChannel(channel)
 
         val notification = NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("QCM Overlay")
-            .setContentText("جاهز لعرض سؤال")
+            .setContentText("Prêt à afficher une question")
             .setSmallIcon(android.R.drawable.ic_dialog_info)
             .setPriority(NotificationCompat.PRIORITY_MIN)
             .build()
@@ -94,37 +92,19 @@ class OverlayService : Service() {
         tvModuleLesson.text = "${question.module} • ${question.lesson}"
         tvQuestion.text = question.text
 
-        // Build option widgets: single answer -> RadioGroup, multi answer -> CheckBoxes
-        val radioGroup = if (!question.isMultiAnswer) RadioGroup(this) else null
-        radioGroup?.orientation = LinearLayout.VERTICAL
+        // Always render checkboxes, whether the question has one or several
+        // correct answers -> the UI never reveals which type it is.
         val checkBoxes = mutableListOf<CheckBox>()
-        val radioButtons = mutableListOf<RadioButton>()
-
-        question.options.forEachIndexed { index, optionText ->
-            if (question.isMultiAnswer) {
-                val cb = CheckBox(this)
-                cb.text = optionText
-                cb.setTextColor(Color.BLACK)
-                optionsContainer.addView(cb)
-                checkBoxes.add(cb)
-            } else {
-                val rb = RadioButton(this)
-                rb.id = index
-                rb.text = optionText
-                rb.setTextColor(Color.BLACK)
-                radioGroup?.addView(rb)
-                radioButtons.add(rb)
-            }
+        question.options.forEach { optionText ->
+            val cb = CheckBox(this)
+            cb.text = optionText
+            cb.setTextColor(Color.BLACK)
+            optionsContainer.addView(cb)
+            checkBoxes.add(cb)
         }
-        radioGroup?.let { optionsContainer.addView(it) }
 
         btnValidate.setOnClickListener {
-            val selected: List<Int> = if (question.isMultiAnswer) {
-                checkBoxes.indices.filter { checkBoxes[it].isChecked }
-            } else {
-                val checkedId = radioGroup?.checkedRadioButtonId ?: -1
-                if (checkedId >= 0) listOf(checkedId) else emptyList()
-            }
+            val selected: List<Int> = checkBoxes.indices.filter { checkBoxes[it].isChecked }
 
             val isCorrect = selected.toSet() == question.correctOptionIds.toSet()
             val correctText = question.correctOptionIds
@@ -133,15 +113,14 @@ class OverlayService : Service() {
 
             tvResult.visibility = View.VISIBLE
             tvResult.text = if (isCorrect) {
-                "✅ صحيح!"
+                "✅ Correct !"
             } else {
-                "❌ خطأ. الجواب الصحيح: $correctText" +
+                "❌ Faux. Bonne réponse : $correctText" +
                     if (question.explanation.isNotBlank()) "\n${question.explanation}" else ""
             }
             tvResult.setTextColor(if (isCorrect) Color.parseColor("#2E7D32") else Color.parseColor("#C62828"))
 
             btnValidate.visibility = View.GONE
-            radioButtons.forEach { it.isEnabled = false }
             checkBoxes.forEach { it.isEnabled = false }
         }
 
