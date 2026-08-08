@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#E8F5E9" />
-    <corners android:radius="14dp" />
-    <stroke android:width="2dp" android:color="#2E7D32" />
-</shape>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape><solid android:color="#2E7D32" /><corners android:radius="14dp" /></shape>
+    </item>
+    <item android:bottom="3dp">
+        <shape><solid android:color="#E8F5E9" /><corners android:radius="14dp" /></shape>
+    </item>
+</layer-list>

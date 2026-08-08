@@ -190,12 +190,12 @@
                     <Button
                         android:id="@+id/btnToggleService"
                         android:layout_width="match_parent"
-                        android:layout_height="52dp"
+                        android:layout_height="56dp"
                         android:layout_marginBottom="10dp"
-                        app:backgroundTint="@color/qcm_green"
-                        app:cornerRadius="14dp"
+                        android:background="@drawable/bg_button_3d_pink"
                         android:textColor="#FFFFFF"
                         android:textStyle="bold"
+                        android:textSize="15sp"
                         android:text="@string/start_service" />
 
                     <Button
