@@ -94,13 +94,31 @@ class OverlayService : Service() {
 
         // Always render checkboxes, whether the question has one or several
         // correct answers -> the UI never reveals which type it is.
-        // Each option is prefixed with a letter (A, B, C...) for easy reference.
+        // Each option is prefixed with a letter (A, B, C...) and shows a
+        // small butterfly when selected.
         val checkBoxes = mutableListOf<CheckBox>()
         question.options.forEachIndexed { i, optionText ->
+            val row = LinearLayout(this)
+            row.orientation = LinearLayout.HORIZONTAL
+            row.gravity = android.view.Gravity.CENTER_VERTICAL
+
             val cb = CheckBox(this)
             cb.text = "${('A' + i)}. $optionText"
             cb.setTextColor(Color.BLACK)
-            optionsContainer.addView(cb)
+            cb.layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f)
+
+            val butterfly = TextView(this)
+            butterfly.text = "🦋"
+            butterfly.textSize = 16f
+            butterfly.visibility = View.GONE
+
+            cb.setOnCheckedChangeListener { _, checked ->
+                butterfly.visibility = if (checked) View.VISIBLE else View.GONE
+            }
+
+            row.addView(cb)
+            row.addView(butterfly)
+            optionsContainer.addView(row)
             checkBoxes.add(cb)
         }
 
