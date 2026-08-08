@@ -65,6 +65,7 @@ class QuizActivity : AppCompatActivity() {
         binding.tvProgress.text = "Question ${index + 1} sur ${questions.size}   •   Bonnes réponses : $correctCount"
         binding.tvQuestion.text = q.text
         binding.tvResult.visibility = View.GONE
+        binding.resultStickerRow.visibility = View.GONE
         binding.btnValidate.visibility = View.VISIBLE
         binding.btnValidate.isEnabled = true
         binding.btnNext.visibility = View.GONE
@@ -98,6 +99,14 @@ class QuizActivity : AppCompatActivity() {
         }
         binding.tvResult.setTextColor(if (isCorrect) Color.parseColor("#2E7D32") else Color.parseColor("#C62828"))
 
+        binding.ivSticker.setImageResource(
+            if (isCorrect) com.qcm.overlay.R.drawable.sticker_correct else com.qcm.overlay.R.drawable.sticker_wrong
+        )
+        binding.tvCaption.text = if (isCorrect) "Nice dida !" else "My baby didn't sleep well"
+        binding.resultStickerRow.visibility = View.VISIBLE
+        binding.resultStickerRow.translationX = 400f
+        binding.resultStickerRow.animate().translationX(0f).setDuration(350).start()
+
         binding.btnValidate.visibility = View.GONE
         binding.btnNext.visibility = View.VISIBLE
         binding.btnNext.text = if (index == questions.size - 1) "Terminer et voir le score 🏁" else "Question suivante ⟶"
@@ -108,6 +117,7 @@ class QuizActivity : AppCompatActivity() {
         binding.tvProgress.text = ""
         binding.optionsContainer.removeAllViews()
         binding.tvResult.visibility = View.GONE
+        binding.resultStickerRow.visibility = View.GONE
         binding.btnValidate.visibility = View.GONE
         binding.btnNext.visibility = View.GONE
 

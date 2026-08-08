@@ -47,6 +47,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <LinearLayout
+        android:id="@+id/resultStickerRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/optionsContainer"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/ivSticker"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/tvCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_caption_bubble"
+            android:padding="8dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/tvResult"
         android:layout_width="0dp"
@@ -55,7 +84,7 @@
         android:textSize="14sp"
         android:textStyle="bold"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/optionsContainer"
+        app:layout_constraintTop_toBottomOf="@id/resultStickerRow"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
