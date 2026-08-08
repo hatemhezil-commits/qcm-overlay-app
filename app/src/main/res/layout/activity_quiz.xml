@@ -53,8 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="22dp"
-            android:paddingBottom="140dp">
+            android:padding="22dp">
 
             <TextView
                 android:id="@+id/tvQuestion"
@@ -78,39 +77,31 @@
                 android:layout_marginTop="14dp"
                 android:textStyle="bold"
                 android:visibility="gone" />
+
+            <!-- Sticker sits in normal flow below the result text, never overlapping it -->
+            <TextView
+                android:id="@+id/tvCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_caption_bubble"
+                android:padding="10dp"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivSticker"
+                android:layout_width="190dp"
+                android:layout_height="190dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="4dp"
+                android:scaleType="fitCenter"
+                android:visibility="gone" />
         </LinearLayout>
     </ScrollView>
-
-    <!-- Big sticker overlay: pops up from the bottom, above the button bar -->
-    <FrameLayout
-        android:id="@+id/stickerOverlay"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:clipChildren="false"
-        android:clipToPadding="false"
-        app:layout_constraintBottom_toTopOf="@id/bottomBar">
-
-        <TextView
-            android:id="@+id/tvCaption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|top"
-            android:layout_marginTop="4dp"
-            android:background="@drawable/bg_caption_bubble"
-            android:padding="10dp"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:visibility="gone" />
-
-        <ImageView
-            android:id="@+id/ivSticker"
-            android:layout_width="190dp"
-            android:layout_height="190dp"
-            android:layout_gravity="center_horizontal|bottom"
-            android:scaleType="fitCenter"
-            android:visibility="gone" />
-    </FrameLayout>
 
     <!-- Bottom bar: previous / validate / next -->
     <LinearLayout

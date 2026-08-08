@@ -127,22 +127,32 @@ class OverlayService : Service() {
         val tvCaption = view.findViewById<TextView>(R.id.tvCaption)
 
         btnValidate.setOnClickListener {
-            val selected: List<Int> = checkBoxes.indices.filter { checkBoxes[it].isChecked }
-
-            val isCorrect = selected.toSet() == question.correctOptionIds.toSet()
+            val selected: Set<Int> = checkBoxes.indices.filter { checkBoxes[it].isChecked }.toSet()
+            val correct = question.correctOptionIds.toSet()
             val correctLetters = question.correctOptionIds.sorted().joinToString(", ") { ('A' + it).toString() }
+            val missingLetters = question.correctOptionIds.filter { it !in selected }.sorted().joinToString(", ") { ('A' + it).toString() }
+
+            val isFull = selected == correct
+            val isPartial = !isFull && selected.isNotEmpty() && selected.all { it in correct }
+            val counted = isFull || isPartial
 
             tvResult.visibility = View.VISIBLE
-            tvResult.text = if (isCorrect) {
-                "✅ Correct !"
-            } else {
-                "❌ Faux. Bonne réponse : $correctLetters" +
+            tvResult.text = when {
+                isFull -> "✅ Correct !"
+                isPartial -> "🟠 Partiellement correct. Il manquait : $missingLetters"
+                else -> "❌ Faux. Bonne réponse : $correctLetters" +
                     if (question.explanation.isNotBlank()) "\n${question.explanation}" else ""
             }
-            tvResult.setTextColor(if (isCorrect) Color.parseColor("#2E7D32") else Color.parseColor("#C62828"))
+            tvResult.setTextColor(
+                when {
+                    isFull -> Color.parseColor("#2E7D32")
+                    isPartial -> Color.parseColor("#EF6C00")
+                    else -> Color.parseColor("#C62828")
+                }
+            )
 
-            ivSticker.setImageResource(if (isCorrect) R.drawable.sticker_correct else R.drawable.sticker_wrong)
-            tvCaption.text = if (isCorrect) "Nice dida !" else "My baby didn't sleep well"
+            ivSticker.setImageResource(if (counted) R.drawable.sticker_correct else R.drawable.sticker_wrong)
+            tvCaption.text = if (counted) "Nice dida !" else "My baby didn't sleep well"
             ivSticker.visibility = View.VISIBLE
             tvCaption.visibility = View.VISIBLE
             ivSticker.translationY = 200f

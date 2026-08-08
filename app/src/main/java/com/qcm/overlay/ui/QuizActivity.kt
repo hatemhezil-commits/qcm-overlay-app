@@ -15,6 +15,8 @@ import com.qcm.overlay.data.Question
 import com.qcm.overlay.data.QuestionRepository
 import com.qcm.overlay.databinding.ActivityQuizBinding
 
+private enum class AnswerStatus { FULL, PARTIAL, WRONG }
+
 class QuizActivity : AppCompatActivity() {
 
     companion object {
@@ -69,13 +71,27 @@ class QuizActivity : AppCompatActivity() {
         binding.btnPrevious.setOnClickListener {
             if (index > 0) {
                 index--
+                // Reset this question so the user can answer it again from scratch.
+                answeredFlags[index] = false
+                selectedSets[index] = null
                 showQuestion()
             }
         }
     }
 
+    /** A selection counts toward the score if it's non-empty and contains no wrong option
+     *  (full match OR a partial-but-correct subset), per the user's request. */
+    private fun classify(selected: Set<Int>, correct: Set<Int>): AnswerStatus {
+        if (selected.isEmpty()) return AnswerStatus.WRONG
+        if (selected == correct) return AnswerStatus.FULL
+        if (selected.all { it in correct }) return AnswerStatus.PARTIAL
+        return AnswerStatus.WRONG
+    }
+
     private fun countCorrect(): Int =
-        questions.indices.count { i -> answeredFlags[i] && selectedSets[i] == questions[i].correctOptionIds.toSet() }
+        questions.indices.count { i ->
+            answeredFlags[i] && classify(selectedSets[i] ?: emptySet(), questions[i].correctOptionIds.toSet()) != AnswerStatus.WRONG
+        }
 
     private fun dp(value: Int): Int = (value * resources.displayMetrics.density).toInt()
 
@@ -132,7 +148,7 @@ class QuizActivity : AppCompatActivity() {
         if (alreadyAnswered && savedSelection != null) {
             checkBoxes.forEachIndexed { i, cb -> cb.isChecked = savedSelection.contains(i) }
             checkBoxes.forEach { it.isEnabled = false }
-            showResultUi(savedSelection == q.correctOptionIds.toSet(), q, animate = false)
+            showResultUi(classify(savedSelection, q.correctOptionIds.toSet()), q, animate = false)
             binding.btnValidate.visibility = View.GONE
             binding.btnNext.visibility = View.VISIBLE
             binding.btnNext.text = if (index == questions.size - 1) "Terminer 🏁" else "Suivant ⟶"
@@ -150,7 +166,7 @@ class QuizActivity : AppCompatActivity() {
         answeredFlags[index] = true
 
         checkBoxes.forEach { it.isEnabled = false }
-        showResultUi(selected == q.correctOptionIds.toSet(), q, animate = true)
+        showResultUi(classify(selected, q.correctOptionIds.toSet()), q, animate = true)
 
         binding.btnValidate.visibility = View.GONE
         binding.btnNext.visibility = View.VISIBLE
@@ -158,19 +174,31 @@ class QuizActivity : AppCompatActivity() {
         binding.tvProgress.text = "Question ${index + 1} sur ${questions.size}   •   Bonnes réponses : ${countCorrect()}"
     }
 
-    private fun showResultUi(isCorrect: Boolean, q: Question, animate: Boolean) {
+    private fun showResultUi(status: AnswerStatus, q: Question, animate: Boolean) {
         val correctLetters = q.correctOptionIds.sorted().joinToString(", ") { ('A' + it).toString() }
-        binding.tvResult.visibility = View.VISIBLE
-        binding.tvResult.text = if (isCorrect) {
-            "✅ Correct !"
-        } else {
-            "❌ Faux. Bonne réponse : $correctLetters" +
-                if (q.explanation.isNotBlank()) "\n${q.explanation}" else ""
-        }
-        binding.tvResult.setTextColor(if (isCorrect) Color.parseColor("#2E7D32") else Color.parseColor("#C62828"))
+        val selected = selectedSets[index] ?: emptySet()
+        val missingLetters = q.correctOptionIds.filter { it !in selected }.sorted().joinToString(", ") { ('A' + it).toString() }
 
-        binding.ivSticker.setImageResource(if (isCorrect) R.drawable.sticker_correct else R.drawable.sticker_wrong)
-        binding.tvCaption.text = if (isCorrect) "Nice dida !" else "My baby didn't sleep well"
+        binding.tvResult.visibility = View.VISIBLE
+        when (status) {
+            AnswerStatus.FULL -> {
+                binding.tvResult.text = "✅ Correct !"
+                binding.tvResult.setTextColor(Color.parseColor("#2E7D32"))
+            }
+            AnswerStatus.PARTIAL -> {
+                binding.tvResult.text = "🟠 Partiellement correct. Il manquait : $missingLetters"
+                binding.tvResult.setTextColor(Color.parseColor("#EF6C00"))
+            }
+            AnswerStatus.WRONG -> {
+                binding.tvResult.text = "❌ Faux. Bonne réponse : $correctLetters" +
+                    if (q.explanation.isNotBlank()) "\n${q.explanation}" else ""
+                binding.tvResult.setTextColor(Color.parseColor("#C62828"))
+            }
+        }
+
+        val counted = status != AnswerStatus.WRONG
+        binding.ivSticker.setImageResource(if (counted) R.drawable.sticker_correct else R.drawable.sticker_wrong)
+        binding.tvCaption.text = if (counted) "Nice dida !" else "My baby didn't sleep well"
         binding.ivSticker.visibility = View.VISIBLE
         binding.tvCaption.visibility = View.VISIBLE
         if (animate) {
@@ -185,7 +213,6 @@ class QuizActivity : AppCompatActivity() {
     }
 
     private fun showSummary() {
-        binding.topBar.let { } // no-op, keeps structure symmetric
         binding.tvProgress.text = ""
         binding.progressBar.progress = 100
         binding.optionsContainer.removeAllViews()
