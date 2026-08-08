@@ -172,6 +172,7 @@ class MainActivity : AppCompatActivity() {
 
                 val cb = CheckBox(this)
                 cb.text = lesson
+                cb.setTextColor(Color.parseColor("#1A1A1A"))
                 cb.isChecked = selected == null || selected.contains(key)
                 cb.setPadding(32, 0, 0, 0)
                 lessonCheckBoxes[key] = cb

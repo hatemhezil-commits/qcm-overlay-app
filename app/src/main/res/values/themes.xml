@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.QcmOverlay" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.QcmOverlay" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/qcm_navy</item>
         <item name="colorPrimaryDark">@color/qcm_navy</item>
         <item name="colorSecondary">@color/qcm_accent</item>
