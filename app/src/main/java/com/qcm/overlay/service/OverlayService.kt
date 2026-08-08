@@ -7,16 +7,20 @@ import android.graphics.Color
 import android.graphics.PixelFormat
 import android.os.Build
 import android.os.IBinder
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.WindowManager
 import android.widget.CheckBox
+import android.widget.FrameLayout
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.app.NotificationCompat
+import androidx.core.content.ContextCompat
 import com.qcm.overlay.R
 import com.qcm.overlay.data.QuestionRepository
+import kotlin.random.Random
 
 class OverlayService : Service() {
 
@@ -48,6 +52,8 @@ class OverlayService : Service() {
         super.onDestroy()
     }
 
+    private fun dp(value: Int): Int = (value * resources.displayMetrics.density).toInt()
+
     private fun startAsForeground() {
         val channel = NotificationChannel(
             CHANNEL_ID, "Rappels QCM", NotificationManager.IMPORTANCE_MIN
@@ -69,6 +75,29 @@ class OverlayService : Service() {
             )
         } else {
             startForeground(NOTIF_ID, notification)
+        }
+    }
+
+    /** A little burst of sparkles falling from the tapped option, purely decorative. */
+    private fun burstSparkles(container: FrameLayout) {
+        val chars = listOf("✨", "⭐", "💫")
+        repeat(5) { i ->
+            val sparkle = TextView(this)
+            sparkle.text = chars[Random.nextInt(chars.size)]
+            sparkle.textSize = 12f
+            val lp = FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT)
+            lp.gravity = Gravity.END or Gravity.CENTER_VERTICAL
+            lp.marginEnd = dp(6 + Random.nextInt(24))
+            sparkle.layoutParams = lp
+            sparkle.alpha = 1f
+            container.addView(sparkle)
+            sparkle.animate()
+                .translationY(dp(26 + Random.nextInt(16)).toFloat())
+                .alpha(0f)
+                .setStartDelay((i * 50).toLong())
+                .setDuration(550)
+                .withEndAction { container.removeView(sparkle) }
+                .start()
         }
     }
 
@@ -95,12 +124,22 @@ class OverlayService : Service() {
         // Always render checkboxes, whether the question has one or several
         // correct answers -> the UI never reveals which type it is.
         // Each option is prefixed with a letter (A, B, C...) and shows a
-        // small butterfly when selected.
+        // small butterfly + sparkle burst when selected.
         val checkBoxes = mutableListOf<CheckBox>()
+        val optionRows = mutableListOf<FrameLayout>()
+
         question.options.forEachIndexed { i, optionText ->
-            val row = LinearLayout(this)
-            row.orientation = LinearLayout.HORIZONTAL
-            row.gravity = android.view.Gravity.CENTER_VERTICAL
+            val row = FrameLayout(this)
+            row.background = ContextCompat.getDrawable(this, R.drawable.bg_option_unselected)
+            row.setPadding(dp(12), dp(10), dp(12), dp(10))
+            val rowParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+            rowParams.bottomMargin = dp(8)
+            row.layoutParams = rowParams
+
+            val innerContent = LinearLayout(this)
+            innerContent.orientation = LinearLayout.HORIZONTAL
+            innerContent.gravity = Gravity.CENTER_VERTICAL
+            innerContent.layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT)
 
             val cb = CheckBox(this)
             cb.text = "${('A' + i)}. $optionText"
@@ -114,13 +153,19 @@ class OverlayService : Service() {
             butterfly.visibility = View.GONE
 
             cb.setOnCheckedChangeListener { _, checked ->
+                row.background = ContextCompat.getDrawable(
+                    this, if (checked) R.drawable.bg_option_selected else R.drawable.bg_option_unselected
+                )
                 butterfly.visibility = if (checked) View.VISIBLE else View.GONE
+                if (checked) burstSparkles(row)
             }
 
-            row.addView(cb)
-            row.addView(butterfly)
+            innerContent.addView(cb)
+            innerContent.addView(butterfly)
+            row.addView(innerContent)
             optionsContainer.addView(row)
             checkBoxes.add(cb)
+            optionRows.add(row)
         }
 
         val ivSticker = view.findViewById<android.widget.ImageView>(R.id.ivSticker)
@@ -129,27 +174,28 @@ class OverlayService : Service() {
         btnValidate.setOnClickListener {
             val selected: Set<Int> = checkBoxes.indices.filter { checkBoxes[it].isChecked }.toSet()
             val correct = question.correctOptionIds.toSet()
-            val correctLetters = question.correctOptionIds.sorted().joinToString(", ") { ('A' + it).toString() }
-            val missingLetters = question.correctOptionIds.filter { it !in selected }.sorted().joinToString(", ") { ('A' + it).toString() }
 
             val isFull = selected == correct
             val isPartial = !isFull && selected.isNotEmpty() && selected.all { it in correct }
             val counted = isFull || isPartial
 
-            tvResult.visibility = View.VISIBLE
-            tvResult.text = when {
-                isFull -> "✅ Correct !"
-                isPartial -> "🟠 Partiellement correct. Il manquait : $missingLetters"
-                else -> "❌ Faux. Bonne réponse : $correctLetters" +
-                    if (question.explanation.isNotBlank()) "\n${question.explanation}" else ""
-            }
-            tvResult.setTextColor(
-                when {
-                    isFull -> Color.parseColor("#2E7D32")
-                    isPartial -> Color.parseColor("#EF6C00")
-                    else -> Color.parseColor("#C62828")
+            // Color each row: green = correctly picked, red = wrongly picked,
+            // orange = correct answer you missed. No separate text needed.
+            optionRows.forEachIndexed { i, row ->
+                val isSelected = i in selected
+                val isCorrect = i in correct
+                val bgRes = when {
+                    isSelected && isCorrect -> R.drawable.bg_option_correct_selected
+                    isSelected && !isCorrect -> R.drawable.bg_option_wrong_selected
+                    !isSelected && isCorrect -> R.drawable.bg_option_missed
+                    else -> R.drawable.bg_option_unselected
                 }
-            )
+                row.background = ContextCompat.getDrawable(this, bgRes)
+            }
+
+            tvResult.visibility = View.VISIBLE
+            tvResult.text = if (counted) "✅ Correct !" else "❌ Faux !"
+            tvResult.setTextColor(Color.parseColor(if (counted) "#2E7D32" else "#C62828"))
 
             ivSticker.setImageResource(if (counted) R.drawable.sticker_correct else R.drawable.sticker_wrong)
             tvCaption.text = if (counted) "Nice dida !" else "My baby didn't sleep well"
@@ -177,7 +223,7 @@ class OverlayService : Service() {
                 WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
             PixelFormat.TRANSLUCENT
         )
-        params.gravity = android.view.Gravity.TOP
+        params.gravity = Gravity.TOP
         params.y = 100
 
         windowManager.addView(view, params)

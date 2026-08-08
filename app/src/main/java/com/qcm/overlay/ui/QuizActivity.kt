@@ -4,8 +4,10 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.view.Gravity
 import android.view.View
 import android.widget.CheckBox
+import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +16,7 @@ import com.qcm.overlay.R
 import com.qcm.overlay.data.Question
 import com.qcm.overlay.data.QuestionRepository
 import com.qcm.overlay.databinding.ActivityQuizBinding
+import kotlin.random.Random
 
 private enum class AnswerStatus { FULL, PARTIAL, WRONG }
 
@@ -40,6 +43,7 @@ class QuizActivity : AppCompatActivity() {
     private lateinit var answeredFlags: BooleanArray
 
     private val checkBoxes = mutableListOf<CheckBox>()
+    private val optionRows = mutableListOf<FrameLayout>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,7 +75,6 @@ class QuizActivity : AppCompatActivity() {
         binding.btnPrevious.setOnClickListener {
             if (index > 0) {
                 index--
-                // Reset this question so the user can answer it again from scratch.
                 answeredFlags[index] = false
                 selectedSets[index] = null
                 showQuestion()
@@ -79,8 +82,6 @@ class QuizActivity : AppCompatActivity() {
         }
     }
 
-    /** A selection counts toward the score if it's non-empty and contains no wrong option
-     *  (full match OR a partial-but-correct subset), per the user's request. */
     private fun classify(selected: Set<Int>, correct: Set<Int>): AnswerStatus {
         if (selected.isEmpty()) return AnswerStatus.WRONG
         if (selected == correct) return AnswerStatus.FULL
@@ -95,6 +96,29 @@ class QuizActivity : AppCompatActivity() {
 
     private fun dp(value: Int): Int = (value * resources.displayMetrics.density).toInt()
 
+    /** A little burst of sparkles falling from the tapped option, purely decorative. */
+    private fun burstSparkles(container: FrameLayout) {
+        val chars = listOf("✨", "⭐", "💫")
+        repeat(5) { i ->
+            val sparkle = TextView(this)
+            sparkle.text = chars[Random.nextInt(chars.size)]
+            sparkle.textSize = 13f
+            val lp = FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT)
+            lp.gravity = Gravity.END or Gravity.CENTER_VERTICAL
+            lp.marginEnd = dp(6 + Random.nextInt(24))
+            sparkle.layoutParams = lp
+            sparkle.alpha = 1f
+            container.addView(sparkle)
+            sparkle.animate()
+                .translationY(dp(30 + Random.nextInt(20)).toFloat())
+                .alpha(0f)
+                .setStartDelay((i * 50).toLong())
+                .setDuration(600)
+                .withEndAction { container.removeView(sparkle) }
+                .start()
+        }
+    }
+
     private fun showQuestion() {
         val q = questions[index]
         binding.progressBar.progress = ((index + 1) * 100) / questions.size
@@ -107,19 +131,23 @@ class QuizActivity : AppCompatActivity() {
 
         binding.optionsContainer.removeAllViews()
         checkBoxes.clear()
+        optionRows.clear()
 
         val alreadyAnswered = answeredFlags[index]
         val savedSelection = selectedSets[index]
 
         q.options.forEachIndexed { i, text ->
-            val row = LinearLayout(this)
-            row.orientation = LinearLayout.HORIZONTAL
-            row.gravity = android.view.Gravity.CENTER_VERTICAL
-            row.setPadding(dp(16), dp(14), dp(16), dp(14))
+            val row = FrameLayout(this)
             row.background = ContextCompat.getDrawable(this, R.drawable.bg_option_unselected)
+            row.setPadding(dp(16), dp(14), dp(16), dp(14))
             val rowParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
             rowParams.bottomMargin = dp(10)
             row.layoutParams = rowParams
+
+            val innerContent = LinearLayout(this)
+            innerContent.orientation = LinearLayout.HORIZONTAL
+            innerContent.gravity = Gravity.CENTER_VERTICAL
+            innerContent.layoutParams = FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT)
 
             val cb = CheckBox(this)
             cb.text = "${('A' + i)}. $text"
@@ -137,18 +165,22 @@ class QuizActivity : AppCompatActivity() {
                     this, if (checked) R.drawable.bg_option_selected else R.drawable.bg_option_unselected
                 )
                 butterfly.visibility = if (checked) View.VISIBLE else View.GONE
+                if (checked) burstSparkles(row)
             }
 
-            row.addView(cb)
-            row.addView(butterfly)
+            innerContent.addView(cb)
+            innerContent.addView(butterfly)
+            row.addView(innerContent)
             binding.optionsContainer.addView(row)
             checkBoxes.add(cb)
+            optionRows.add(row)
         }
 
         if (alreadyAnswered && savedSelection != null) {
             checkBoxes.forEachIndexed { i, cb -> cb.isChecked = savedSelection.contains(i) }
             checkBoxes.forEach { it.isEnabled = false }
-            showResultUi(classify(savedSelection, q.correctOptionIds.toSet()), q, animate = false)
+            colorRows(q, savedSelection)
+            showResultUi(classify(savedSelection, q.correctOptionIds.toSet()), animate = false)
             binding.btnValidate.visibility = View.GONE
             binding.btnNext.visibility = View.VISIBLE
             binding.btnNext.text = if (index == questions.size - 1) "Terminer 🏁" else "Suivant ⟶"
@@ -159,6 +191,23 @@ class QuizActivity : AppCompatActivity() {
         }
     }
 
+    /** Colors each option row: green = correctly picked, red = wrongly picked,
+     *  orange = correct answer you missed, unchanged otherwise. */
+    private fun colorRows(q: Question, selected: Set<Int>) {
+        val correct = q.correctOptionIds.toSet()
+        optionRows.forEachIndexed { i, row ->
+            val isSelected = i in selected
+            val isCorrect = i in correct
+            val bgRes = when {
+                isSelected && isCorrect -> R.drawable.bg_option_correct_selected
+                isSelected && !isCorrect -> R.drawable.bg_option_wrong_selected
+                !isSelected && isCorrect -> R.drawable.bg_option_missed
+                else -> R.drawable.bg_option_unselected
+            }
+            row.background = ContextCompat.getDrawable(this, bgRes)
+        }
+    }
+
     private fun validateAnswer() {
         val q = questions[index]
         val selected = checkBoxes.indices.filter { checkBoxes[it].isChecked }.toSet()
@@ -166,7 +215,8 @@ class QuizActivity : AppCompatActivity() {
         answeredFlags[index] = true
 
         checkBoxes.forEach { it.isEnabled = false }
-        showResultUi(classify(selected, q.correctOptionIds.toSet()), q, animate = true)
+        colorRows(q, selected)
+        showResultUi(classify(selected, q.correctOptionIds.toSet()), animate = true)
 
         binding.btnValidate.visibility = View.GONE
         binding.btnNext.visibility = View.VISIBLE
@@ -174,29 +224,13 @@ class QuizActivity : AppCompatActivity() {
         binding.tvProgress.text = "Question ${index + 1} sur ${questions.size}   •   Bonnes réponses : ${countCorrect()}"
     }
 
-    private fun showResultUi(status: AnswerStatus, q: Question, animate: Boolean) {
-        val correctLetters = q.correctOptionIds.sorted().joinToString(", ") { ('A' + it).toString() }
-        val selected = selectedSets[index] ?: emptySet()
-        val missingLetters = q.correctOptionIds.filter { it !in selected }.sorted().joinToString(", ") { ('A' + it).toString() }
+    private fun showResultUi(status: AnswerStatus, animate: Boolean) {
+        val counted = status != AnswerStatus.WRONG
 
         binding.tvResult.visibility = View.VISIBLE
-        when (status) {
-            AnswerStatus.FULL -> {
-                binding.tvResult.text = "✅ Correct !"
-                binding.tvResult.setTextColor(Color.parseColor("#2E7D32"))
-            }
-            AnswerStatus.PARTIAL -> {
-                binding.tvResult.text = "🟠 Partiellement correct. Il manquait : $missingLetters"
-                binding.tvResult.setTextColor(Color.parseColor("#EF6C00"))
-            }
-            AnswerStatus.WRONG -> {
-                binding.tvResult.text = "❌ Faux. Bonne réponse : $correctLetters" +
-                    if (q.explanation.isNotBlank()) "\n${q.explanation}" else ""
-                binding.tvResult.setTextColor(Color.parseColor("#C62828"))
-            }
-        }
+        binding.tvResult.text = if (counted) "✅ Correct !" else "❌ Faux !"
+        binding.tvResult.setTextColor(Color.parseColor(if (counted) "#2E7D32" else "#C62828"))
 
-        val counted = status != AnswerStatus.WRONG
         binding.ivSticker.setImageResource(if (counted) R.drawable.sticker_correct else R.drawable.sticker_wrong)
         binding.tvCaption.text = if (counted) "Nice dida !" else "My baby didn't sleep well"
         binding.ivSticker.visibility = View.VISIBLE
