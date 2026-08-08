@@ -124,7 +124,6 @@ class OverlayService : Service() {
 
         val ivSticker = view.findViewById<android.widget.ImageView>(R.id.ivSticker)
         val tvCaption = view.findViewById<TextView>(R.id.tvCaption)
-        val resultStickerRow = view.findViewById<LinearLayout>(R.id.resultStickerRow)
 
         btnValidate.setOnClickListener {
             val selected: List<Int> = checkBoxes.indices.filter { checkBoxes[it].isChecked }
@@ -143,9 +142,12 @@ class OverlayService : Service() {
 
             ivSticker.setImageResource(if (isCorrect) R.drawable.sticker_correct else R.drawable.sticker_wrong)
             tvCaption.text = if (isCorrect) "Nice dida !" else "My baby didn't sleep well"
-            resultStickerRow.visibility = View.VISIBLE
-            resultStickerRow.translationX = 400f
-            resultStickerRow.animate().translationX(0f).setDuration(350).start()
+            ivSticker.visibility = View.VISIBLE
+            tvCaption.visibility = View.VISIBLE
+            ivSticker.translationY = 200f
+            tvCaption.alpha = 0f
+            ivSticker.animate().translationY(0f).setDuration(380).start()
+            tvCaption.animate().alpha(1f).setStartDelay(200).setDuration(200).start()
 
             btnValidate.visibility = View.GONE
             checkBoxes.forEach { it.isEnabled = false }

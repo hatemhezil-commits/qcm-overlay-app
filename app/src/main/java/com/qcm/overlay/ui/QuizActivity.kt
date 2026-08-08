@@ -85,7 +85,8 @@ class QuizActivity : AppCompatActivity() {
         binding.tvProgress.text = "Question ${index + 1} sur ${questions.size}   •   Bonnes réponses : ${countCorrect()}"
         binding.tvQuestion.text = q.text
         binding.tvResult.visibility = View.GONE
-        binding.resultStickerRow.visibility = View.GONE
+        binding.ivSticker.visibility = View.GONE
+        binding.tvCaption.visibility = View.GONE
         binding.btnPrevious.visibility = if (index > 0) View.VISIBLE else View.INVISIBLE
 
         binding.optionsContainer.removeAllViews()
@@ -169,12 +170,16 @@ class QuizActivity : AppCompatActivity() {
 
         binding.ivSticker.setImageResource(if (isCorrect) R.drawable.sticker_correct else R.drawable.sticker_wrong)
         binding.tvCaption.text = if (isCorrect) "Nice dida !" else "My baby didn't sleep well"
-        binding.resultStickerRow.visibility = View.VISIBLE
+        binding.ivSticker.visibility = View.VISIBLE
+        binding.tvCaption.visibility = View.VISIBLE
         if (animate) {
-            binding.resultStickerRow.translationX = 400f
-            binding.resultStickerRow.animate().translationX(0f).setDuration(350).start()
+            binding.ivSticker.translationY = 260f
+            binding.tvCaption.alpha = 0f
+            binding.ivSticker.animate().translationY(0f).setDuration(380).start()
+            binding.tvCaption.animate().alpha(1f).setStartDelay(200).setDuration(200).start()
         } else {
-            binding.resultStickerRow.translationX = 0f
+            binding.ivSticker.translationY = 0f
+            binding.tvCaption.alpha = 1f
         }
     }
 
@@ -184,7 +189,8 @@ class QuizActivity : AppCompatActivity() {
         binding.progressBar.progress = 100
         binding.optionsContainer.removeAllViews()
         binding.tvResult.visibility = View.GONE
-        binding.resultStickerRow.visibility = View.GONE
+        binding.ivSticker.visibility = View.GONE
+        binding.tvCaption.visibility = View.GONE
         binding.btnValidate.visibility = View.GONE
         binding.btnNext.visibility = View.GONE
         binding.btnPrevious.visibility = View.GONE
