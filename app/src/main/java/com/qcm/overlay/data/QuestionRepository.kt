@@ -63,25 +63,35 @@ class QuestionRepository(private val context: Context) {
             val lessons = root.optJSONObject("lessons") ?: continue
 
             for (lessonName in lessons.keys()) {
-                val questionsArray: JSONArray = lessons.optJSONArray(lessonName) ?: continue
-                for (i in 0 until questionsArray.length()) {
-                    val q = questionsArray.optJSONObject(i) ?: continue
-                    val optionsArray = q.optJSONArray("options") ?: JSONArray()
-                    val options = (0 until optionsArray.length()).map { optionsArray.getString(it) }
+                val lessonValue = lessons.opt(lessonName)
+                val questionArrays: List<JSONArray> = when (lessonValue) {
+                    is JSONArray -> listOf(lessonValue) // old format: lesson -> [questions]
+                    is JSONObject -> lessonValue.keys().asSequence() // new format: lesson -> {year -> [questions]}
+                        .mapNotNull { year -> lessonValue.optJSONArray(year) }
+                        .toList()
+                    else -> emptyList()
+                }
 
-                    val correctArray = q.optJSONArray("correct_option_ids") ?: JSONArray()
-                    val correctIds = (0 until correctArray.length()).map { correctArray.getInt(it) }
+                for (questionsArray in questionArrays) {
+                    for (i in 0 until questionsArray.length()) {
+                        val q = questionsArray.optJSONObject(i) ?: continue
+                        val optionsArray = q.optJSONArray("options") ?: JSONArray()
+                        val options = (0 until optionsArray.length()).map { optionsArray.getString(it) }
 
-                    result.add(
-                        Question(
-                            module = module,
-                            lesson = lessonName,
-                            text = q.optString("question"),
-                            options = options,
-                            correctOptionIds = correctIds,
-                            explanation = q.optString("explanation")
+                        val correctArray = q.optJSONArray("correct_option_ids") ?: JSONArray()
+                        val correctIds = (0 until correctArray.length()).map { correctArray.getInt(it) }
+
+                        result.add(
+                            Question(
+                                module = module,
+                                lesson = lessonName,
+                                text = q.optString("question"),
+                                options = options,
+                                correctOptionIds = correctIds,
+                                explanation = q.optString("explanation")
+                            )
                         )
-                    )
+                    }
                 }
             }
         }
