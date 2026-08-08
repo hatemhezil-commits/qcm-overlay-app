@@ -94,10 +94,11 @@ class OverlayService : Service() {
 
         // Always render checkboxes, whether the question has one or several
         // correct answers -> the UI never reveals which type it is.
+        // Each option is prefixed with a letter (A, B, C...) for easy reference.
         val checkBoxes = mutableListOf<CheckBox>()
-        question.options.forEach { optionText ->
+        question.options.forEachIndexed { i, optionText ->
             val cb = CheckBox(this)
-            cb.text = optionText
+            cb.text = "${('A' + i)}. $optionText"
             cb.setTextColor(Color.BLACK)
             optionsContainer.addView(cb)
             checkBoxes.add(cb)
@@ -107,15 +108,13 @@ class OverlayService : Service() {
             val selected: List<Int> = checkBoxes.indices.filter { checkBoxes[it].isChecked }
 
             val isCorrect = selected.toSet() == question.correctOptionIds.toSet()
-            val correctText = question.correctOptionIds
-                .map { question.options.getOrElse(it) { "" } }
-                .joinToString(" | ")
+            val correctLetters = question.correctOptionIds.sorted().joinToString(", ") { ('A' + it).toString() }
 
             tvResult.visibility = View.VISIBLE
             tvResult.text = if (isCorrect) {
                 "✅ Correct !"
             } else {
-                "❌ Faux. Bonne réponse : $correctText" +
+                "❌ Faux. Bonne réponse : $correctLetters" +
                     if (question.explanation.isNotBlank()) "\n${question.explanation}" else ""
             }
             tvResult.setTextColor(if (isCorrect) Color.parseColor("#2E7D32") else Color.parseColor("#C62828"))

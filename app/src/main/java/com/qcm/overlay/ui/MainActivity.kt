@@ -118,13 +118,13 @@ class MainActivity : AppCompatActivity() {
             val arrow = TextView(this)
             arrow.text = "▶"
             arrow.textSize = 14f
-            arrow.setTextColor(Color.parseColor("#0A2540"))
+            arrow.setTextColor(Color.parseColor("#8E24AA"))
             arrow.setPadding(0, 0, 12, 0)
             moduleArrows[module] = arrow
 
             val title = TextView(this)
             title.text = module
-            title.setTextColor(Color.parseColor("#0A2540"))
+            title.setTextColor(Color.parseColor("#8E24AA"))
             title.setTypeface(null, Typeface.BOLD)
             title.textSize = 15f
 

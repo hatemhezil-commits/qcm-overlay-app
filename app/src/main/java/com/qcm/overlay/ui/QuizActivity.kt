@@ -72,9 +72,9 @@ class QuizActivity : AppCompatActivity() {
         binding.optionsContainer.removeAllViews()
         checkBoxes.clear()
 
-        q.options.forEach { text ->
+        q.options.forEachIndexed { i, text ->
             val cb = CheckBox(this)
-            cb.text = text
+            cb.text = "${('A' + i)}. $text"
             cb.setTextColor(Color.BLACK)
             binding.optionsContainer.addView(cb)
             checkBoxes.add(cb)
@@ -88,12 +88,12 @@ class QuizActivity : AppCompatActivity() {
         val isCorrect = selected.toSet() == q.correctOptionIds.toSet()
         if (isCorrect) correctCount++
 
-        val correctText = q.correctOptionIds.map { q.options.getOrElse(it) { "" } }.joinToString(" | ")
+        val correctLetters = q.correctOptionIds.sorted().joinToString(", ") { ('A' + it).toString() }
         binding.tvResult.visibility = View.VISIBLE
         binding.tvResult.text = if (isCorrect) {
             "✅ Correct !"
         } else {
-            "❌ Faux. Bonne réponse : $correctText" +
+            "❌ Faux. Bonne réponse : $correctLetters" +
                 if (q.explanation.isNotBlank()) "\n${q.explanation}" else ""
         }
         binding.tvResult.setTextColor(if (isCorrect) Color.parseColor("#2E7D32") else Color.parseColor("#C62828"))

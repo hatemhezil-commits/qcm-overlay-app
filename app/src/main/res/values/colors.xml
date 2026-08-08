@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="qcm_navy">#00162E</color>
-    <color name="qcm_navy_light">#0A2540</color>
-    <color name="qcm_green">#2ECC71</color>
-    <color name="qcm_green_dark">#219150</color>
-    <color name="qcm_bg">#F5F5F7</color>
+    <!-- Feminine palette: rose + soft lavender -->
+    <color name="qcm_navy">#C2185B</color>          <!-- header / primary: deep rose -->
+    <color name="qcm_navy_light">#8E24AA</color>    <!-- titles: plum/purple -->
+    <color name="qcm_green">#EC407A</color>         <!-- primary action buttons: pink -->
+    <color name="qcm_green_dark">#AD1457</color>
+    <color name="qcm_bg">#FFF0F5</color>            <!-- lavender blush background -->
     <color name="qcm_card">#FFFFFF</color>
-    <color name="qcm_text_secondary">#6B7280</color>
+    <color name="qcm_text_secondary">#9E7B95</color>
+    <color name="qcm_accent">#BA68C8</color>        <!-- lavender accent -->
 </resources>

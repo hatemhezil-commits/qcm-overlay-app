@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textSize="12sp"
-        android:textColor="#0A2540"
+        android:textColor="#8E24AA"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnClose" />
@@ -66,7 +66,7 @@
         android:layout_marginTop="12dp"
         android:text="@string/validate"
         android:textColor="#FFFFFF"
-        android:backgroundTint="#2ECC71"
+        android:backgroundTint="#EC407A"
         app:layout_constraintTop_toBottomOf="@id/tvResult"
         app:layout_constraintEnd_toEndOf="parent" />
 
